@@ -268,7 +268,25 @@ content
 ## Appendix
 
 ### Onboarding Workbooks
-../onboarding/BigSpill%20-%20Starters.xlsx
+## Appendix
+
+### A. Onboarding Workbooks
+The following workbooks provide demonstrations of all functions in BigSpill. 
+They are listed in the recommended learning order:
+
+- [00 – BigSpill – Starters](<onboarding/00 - BigSpill - Starters.xlsx>)
+- [01 – BigSpill – Gridwork and Grid Geometry](<onboarding/01 - BigSpill - Gridwork and Grid Geometry.xlsx>)
+- [02 – BigSpill – 2D Array Shaping](<onboarding/02 - BigSpill - 2D Array Shaping.xlsx>)
+- [03 – BigSpill – Grid Algebra](<onboarding/03 - BigSpill - Grid Algebra.xlsx>)
+- [04 – BigSpill – Repetition](<onboarding/04 - BigSpill - Repetition.xlsx>)
+- [05 – BigSpill – Grid Analytics](<onboarding/05 - BigSpill - Grid Analytics.xlsx>)
+- [06 – BigSpill – Text](<onboarding/06 - BigSpill - Text.xlsx>)
+- [07 – BigSpill – Engineering](<onboarding/07 - BigSpill - Engineering.xlsx>)
+- [08 – BigSpill – Combinatorics](<onboarding/08 - BigSpill - Combinatorics.xlsx>)
+- [09 – BigSpill – Diagnostics](<onboarding/09 - BigSpill - Diagnostics.xlsx>)
+
+
+
 
 
 
