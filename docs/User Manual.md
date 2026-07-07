@@ -43,7 +43,7 @@ Steps:
 6. To verify the transfer, enter: `=Shiftλ(123,1)`. If `{2;3;1}` spills, BigSpill is installed.
 
 Note:
-- Always copy from the BigSpill workbook into the workbook that will receive BigSpill.
+- Always copy from the BigSpill workbook into the workbook that will receive BigSpill (Once you've verified installation, the blank sheet can be deleted from your workbook).
 - All BigSpill functions include a `λ` suffix, which prevents name conflicts when the above steps are performed.
 
 ## 2.4 Requesting a Gist import URL (Advanced)
