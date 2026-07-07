@@ -274,23 +274,70 @@ Functions whose purpose is to expose, annotate, or explain the internal structur
 | **Revealλ** | Returns either a semantic summary (Numbers, Texts, Errors, etc.) or a verbose cell‑by‑cell narration |
 
 ---
-## 5. Errors
+## 4. Errors
+BigSpill functions return text‑based error codes when inputs are invalid. These codes are designed to be more informative than Excel’s native errors and help users quickly identify the source of a problem.
+
+| Error | Description |
+|---------|-------------|
+| #AXIS! | Invalid direction or axis code. |
+| #BIN-WIDTH! | Bin width is negative or out of range. |
+| #BLOCK-OFFSET! | Block offset is invalid. |
+| #BLOCK-SIZE! | Block size is invalid. |
+| #COLUMN-INDEX! | Invalid column index. |
+| #DEGREE! | Invalid degree parameter. |
+| #DELIMITER-ARRAY! | Multiple delimiters supplied where one was expected. |
+| #DIMENSIONS! | Array shapes do not match, or height/width parameters are invalid. |
+| #EMPTY-ARRAY! | A required array is empty. |
+| #EMPTY-INPUT! | No data supplied. |
+| #EMBED! | Invalid host array for embedding. |
+| #FUNCTION! | Reducer or function is not a valid LAMBDA. |
+| #HEIGHT! | Invalid height parameter. |
+| #INPUT-MISMATCH! | Item and weight arrays differ in length. |
+| #INTERVAL! | Invalid interval specification. |
+| #INVALID-COL! | Column index out of bounds. |
+| #INVALID-FUNCTION! | Invalid reducer or function. |
+| #INVALID-ROW! | Row index out of bounds. |
+| #KERNEL! | Kernel contains non‑numeric values or is larger than the input array. |
+| #MATRIX! | Input is not a valid matrix. |
+| #NEIGHBOR! | Invalid neighbor code (must be 1–9). |
+| #NO-ANCHOR! | start_at anchor not found. |
+| #NO-DATES! | No dates found in input. |
+| #NO-REPEATS! | No repeated values found. |
+| #NO-SLICE! | stop_when occurs before start_at. |
+| #NO-SOLUTION! | No subset matches the target. |
+| #NO-TIMES! | No times found in input. |
+| #NOT-ARRAY! | Input is not an array. |
+| #RADIUS! | Invalid radius parameter. |
+| #ROW-LIMIT! | Spill exceeds Excel’s row limit. |
+| #SCALAR! | A scalar was supplied where an array was required. |
+| #SPILL-RISK! | Spill size exceeds safe limits. |
+| #TARGET! | Target value not found. |
+| #TEXT! | A text value was supplied where a number was required. |
+| #TEXT-PAD! | Padding count is negative or text. |
+| #TEXT-SET! | Set contains non‑numeric values. |
+| #TEXT-SHIFT! | Invalid text shift input. |
+| #TEXT-TARGET! | Target contains non‑numeric values. |
+| #TOO-MANY-ITEMS! | Combinatorial explosion (too many items). |
+| #VALUE-CAPACITY! | Capacity is invalid. |
+| #VALUE-ITEM! | Item values are invalid. |
+| #VALUE-WEIGHTS! | Weights are invalid. |
+| #WIDTH! | Invalid width parameter. |
+
+
+---
+## 5. Usage Patterns
 content
 
 ---
-## 6. Usage Patterns
+## 6. Multi-Step Examples
 content
 
 ---
-## 7. Multi-Step Examples
+## 7. Performance Notes
 content
 
 ---
-## 8. Performance Notes
-content
-
----
-## 9. Versioning Notes
+## 8. Versioning Notes
 content
 
 ---
