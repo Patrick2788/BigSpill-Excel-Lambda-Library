@@ -12,13 +12,15 @@
    Appendix
 
 
-
+---
 ## 1. Overview
 content
 
+---
 ## 2. Installation & Setup
 content
 
+---
 ## 3. Function Reference
 This section provides a complete, module‑ordered catalog of all BigSpill functions, along with short descriptions and structural groupings.
 
@@ -88,6 +90,7 @@ Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while pr
 | --- | --- |
 | **Magnifyλ** | Expands each element into a block of specified height × width using nearest‑neighbor interpolation |
 | **Zoomλ** | Expands each element into a block whose size matches the height × width of `zoom_kernel` |
+
 ---
 ### Grid Algebra
 A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
@@ -239,21 +242,27 @@ Functions whose purpose is to expose, annotate, or explain the internal structur
 | --- | --- |
 | **Revealλ** | Returns either a semantic summary (Numbers, Texts, Errors, etc.) or a verbose cell‑by‑cell narration |
 
+---
 ## 5. Errors
 content
 
+---
 ## 6. Usage Patterns
 content
 
+---
 ## 7. Multi-Step Examples
 content
 
+---
 ## 8. Performance Notes
 content
 
+---
 ## 9. Versioning Notes
 content
 
+---
 ## Appendix
 
 
