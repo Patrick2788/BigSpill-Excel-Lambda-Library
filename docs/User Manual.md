@@ -32,7 +32,7 @@ The foundational coordinate systems for 2D arrays. Each function produces a cent
 | **CGridλ**   |    Cartesian grid (row or column coordinates, centered) |
 | **MGridλ**   |    Mesh grid (1‑based row or column indices) |
 | **TGridλ**   |    Thresholded mesh grid (indices wrap after a limit) |
-| **PolarGridλ**	| Polar coordinates: radial distance and angle (``ATAN2``) |
+| **PolarGridλ**	| Polar coordinates: radial distance and angle (`ATAN2`) |
 
 ---
 ### Grid Geometry
@@ -58,7 +58,7 @@ Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while pr
 | --- | --- |
 | **ReShape2Dλ** | Reshapes a 2D array into a new column width using row‑major order |
 | **ReSizeλ** | Repeats a 2D array vertically and/or horizontally by integer repeat counts |
-| **Scan2Dλ** | Traversal‑aware 2D scanning operator extending Excel’s native ``SCAN`` |
+| **Scan2Dλ** | Traversal‑aware 2D scanning operator extending Excel’s native `SCAN` |
 | **Traverseλ** | Remaps a 2D array into a new traversal order using diagonal directions |
 | **TakeBlockλ** | Extracts a rectangular block using start_at and optional stop_when |
 | **DStackλ** | Stacks multiple 2D arrays along a depth dimension |
@@ -87,7 +87,7 @@ Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while pr
 | Function | Description |
 | --- | --- |
 | **Magnifyλ** | Expands each element into a block of specified height × width using nearest‑neighbor interpolation |
-| **Zoomλ** | Expands each element into a block whose size matches the height × width of ``zoom_kernel`` |
+| **Zoomλ** | Expands each element into a block whose size matches the height × width of `zoom_kernel` |
 ---
 ### Grid Algebra
 A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
@@ -99,7 +99,7 @@ A toolkit for structural editing of 2D arrays. These operators support deletion,
 | **DeleteRowsλ** | Deletes rows from a 2D array based on contiguous subgroup runs |
 | **DeleteColsλ** | Deletes columns from a 2D array based on contiguous subgroup runs |
 | **DeleteWhereλ** | Removes vertical and horizontal vectors based on a predicate Lambda |
-| **Pinchλ** | Removes rows/columns whose cells all have ``LEN(cell) ``= ``0`` |
+| **Pinchλ** | Removes rows/columns whose cells all have `LEN(cell) `= `0` |
 | **Removeλ** | Removes specific rows and/or columns |
 | **Squeezeλ** | Removes null and straight‑zero vectors |
 		
@@ -138,7 +138,7 @@ A toolkit for structural editing of 2D arrays. These operators support deletion,
 | --- | --- |
 | **BlockMapλ** | Reshapes a matrix row‑wise or column‑wise into blocks of size depth × width |
 | **Convolveλ** | Performs sliding‑window convolution using a 2D kernel |
-| **Foldλ** | Groups identical rows and aggregates values from ``values_array`` |
+| **Foldλ** | Groups identical rows and aggregates values from `values_array` |
 | **Join2Dλ** | Joins non‑empty values across 2–4 identically‑shaped arrays using a delimiter |
 
 ---
@@ -150,7 +150,7 @@ Functions that replicate arrays along rows, columns, or both.
 | **Echoλ** | Repeats each element in a 1D array according to repeat counts |
 | **RepeatRowsλ** | Repeats each row according to repeat counts |
 | **RepeatColsλ** | Repeats each column according to repeat counts |
-| **Tessellateλ** | Generates a modular tessellation of a 2D pattern defined by ``new_height ``× ``new_width`` |
+| **Tessellateλ** | Generates a modular tessellation of a 2D pattern defined by `new_height `× `new_width` |
 
 ---
 ### Grid Analytics
@@ -187,15 +187,15 @@ A collection of functions for elegant sequencing, categorical analysis, neighbor
 | --- | --- |
 | **Histogramλ** | Generates a histogram using automatic binning rules |
 | **Modeλ** | Returns the most frequently occurring values or text entries |
-| **ZoneStatλ** | Aggregates values by zones determined by ``Histogramλ`` |
+| **ZoneStatλ** | Aggregates values by zones determined by `Histogramλ` |
 
 ---
 ### Text
-This category provides operators that overcome common limitations in Excel's native text engine (e.g., ``TEXTSPLIT`` cannot spill 2D results; ``BYROW`` cannot deploy ``SORT`` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
+This category provides operators that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
 
 | Function | Description |
 | --- | --- |
-| **Alignλ** | Sorts each row (or column when ``by_col=TRUE``) alphabetically |
+| **Alignλ** | Sorts each row (or column when `by_col=TRUE`) alphabetically |
 | **AlignDistinctλ** | Sorted distinct values |
 | **AlignUniqueλ** | Sorted unique values |
 | **Coalesceλ** | Returns the first non‑empty value across 2–4 arrays |
@@ -206,7 +206,7 @@ This category provides operators that overcome common limitations in Excel's nat
 
 ---
 ### Engineering
-Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native ``DEC2BIN`` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
+Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native `DEC2BIN` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
 
 | Function | Description |
 | --- | --- |
