@@ -20,7 +20,16 @@ content
 
 ---
 ## 2. Installation & Setup
-content
+
+### 2.1 Install via BigSpill Template (Recommended)
+The [BigSpill Template](<templates/BigSpill_Template.xlsx>) is the fastest way to install the full library.
+
+Save it to a safe location on your computer and double‑click it to create a new workbook. This new workbook will come preloaded with the entire BigSpill function catalog.
+
+### 2.2 Verifying BigSpill is Installed
+1. Double-click BigSpill_Template.xltx to open a new workbook.
+2. In any cell enter: `=Shiftλ(123,1)`.
+3. If the functions spills a 3 x 1 array of: {2; 3; 1} then BigSpill is installed. `#NAME?` would indicate the workbook was not created from the BigSpill Template.
 
 ---
 ## 3. Function Reference
