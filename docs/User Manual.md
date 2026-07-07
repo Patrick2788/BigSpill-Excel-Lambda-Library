@@ -29,7 +29,27 @@ Save it to a safe location on your computer and double‑click it to create a ne
 ### 2.2 Verifying BigSpill is Installed
 1. Double-click BigSpill_Template.xltx to open a new workbook.
 2. In any cell enter: `=Shiftλ(123,1)`.
-3. If the functions spills a 3 x 1 array of: {2; 3; 1} then BigSpill is installed. `#NAME?` would indicate the workbook was not created from the BigSpill Template.
+3. If the functions spills a 3 x 1 array of: `{2; 3; 1}` then BigSpill is installed. `#NAME?` would indicate the workbook was not created from the BigSpill Template.
+
+### 2.3 Adding BigSpill to an Existing Workbook
+If you want to use BigSpill inside an existing .xlsx, the easiest method is to copy a sheet from a BigSpill‑enabled workbook. This automatically transfers all BigSpill modules and supporting names.
+
+Steps:
+1. Open a new workbook created from BigSpill_Template.xltx.
+2. Open the workbook that will receive BigSpill.
+3. Right‑click the sheet tab in the BigSpill workbook → Move or Copy…
+4. Choose the destination workbook.
+5. Check Create a copy → OK.
+6. To verify the transfer, enter: `=Shiftλ(123,1)`. If `{2;3;1}` spills, BigSpill is installed.
+
+Note:
+- Always copy from the BigSpill workbook into the workbook that will receive BigSpill.
+- All BigSpill functions include a `λ` suffix, which prevents name conflicts when the above steps are performed.
+
+## 2.4 Requesting a Gist import URL (Advanced)
+BigSpill can also be installed using the Advanced Formula Environment (AFE) by importing a private Gist that contains the full module. This installation method is intended for developers.
+
+The Gist URL is not included in this manual. Access may be granted upon request.
 
 ---
 ## 3. Function Reference
@@ -280,7 +300,7 @@ content
 ## Appendix
 
 ### A. Onboarding Workbooks
-The following workbooks provide demonstrations of all functions in BigSpill. 
+The following workbooks provide demonstrations of all functions in BigSpill. All workbooks include the entire BigSpill module.
 They are listed in the recommended learning order:
 
 - [00 – BigSpill – Starters](<onboarding/00 - BigSpill - Starters.xlsx>)
