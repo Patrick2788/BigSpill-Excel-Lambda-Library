@@ -3,13 +3,12 @@
 ## Table of Contents
 1. Overview
 2. Installation & Setup
-3. Module Design
-4. Function Reference
-5. Errors
-6. Usage Patterns
-7. Multi-Step Examples
-8. Performance Notes
-9. Versioning Notes
+3. Function Reference
+4. Errors
+5. Usage Patterns
+6. Multi-Step Examples
+7. Performance Notes
+8. Versioning Notes
    Appendix
 
 
@@ -20,26 +19,12 @@ content
 ## 2. Installation & Setup
 content
 
-## 3. Module Design
-BigSpill is comprised of 10 modules:
-
-| Module | Description |
-|---------|-------------|
-| **Gridwork**   |   The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid.   |
-| **Grid Geometry**   | A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.   |
-| **2D Array Shaping**   |  Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data. |
-| **Grid Algebra**   |  A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping. |
-| **Repetition**   |  Functions that replicate arrays along rows, columns, or both. |
-| **Grid Analytics**   | A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics.  |
-| **Text**   | This category provides operators that overcome common limitations in Excel's native text engine (e.g., ``TEXTSPLIT`` cannot spill 2D results; ``BYROW`` cannot deploy ``SORT`` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.  |
-| **Engineering**   |  Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native ``DEC2BIN`` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable. |
-| **Combinatorics**   | High‑performance generators for permutations, combinations, subsets, and related structures.  |
-| **Diagnostics**   |  Functions whose purpose is to expose, annotate, or explain the internal structure of a grid. Diagnostics functions are used for debugging, introspection, visualization, and structural analysis. |
-
-## 4. Function Reference
+## 3. Function Reference
+This section provides a complete, module‑ordered catalog of all BigSpill functions, along with short descriptions and structural groupings.
 
 ---
 ### Gridwork
+The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid. 
 
 | Function | Description |
 |---------|-------------|
@@ -48,8 +33,10 @@ BigSpill is comprised of 10 modules:
 | **MGridλ**   |    Mesh grid (1‑based row or column indices) |
 | **TGridλ**   |    Thresholded mesh grid (indices wrap after a limit) |
 | **PolarGridλ**	| Polar coordinates: radial distance and angle (``ATAN2``) |
+
 ---
 ### Grid Geometry
+A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
 
 | Function | Description |
 |---------|-------------|
@@ -60,8 +47,10 @@ BigSpill is comprised of 10 modules:
 | **Ringλ** | Layer‑based perimeter extraction |
 | **Squareλ** | Chebyshev‑radius square |
 | **Triangleλ** | Directional triangular region (above or below) |
+
 ---
 ### 2D Array Shaping
+Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
 #### Core Shaping Primitives
 
@@ -101,6 +90,7 @@ BigSpill is comprised of 10 modules:
 | **Zoomλ** | Expands each element into a block whose size matches the height × width of ``zoom_kernel`` |
 ---
 ### Grid Algebra
+A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
 
 #### Deletion
 
@@ -150,8 +140,10 @@ BigSpill is comprised of 10 modules:
 | **Convolveλ** | Performs sliding‑window convolution using a 2D kernel |
 | **Foldλ** | Groups identical rows and aggregates values from ``values_array`` |
 | **Join2Dλ** | Joins non‑empty values across 2–4 identically‑shaped arrays using a delimiter |
+
 ---
 ### Repetition
+Functions that replicate arrays along rows, columns, or both.
 
 | Function | Description |
 | --- | --- |
@@ -159,8 +151,10 @@ BigSpill is comprised of 10 modules:
 | **RepeatRowsλ** | Repeats each row according to repeat counts |
 | **RepeatColsλ** | Repeats each column according to repeat counts |
 | **Tessellateλ** | Generates a modular tessellation of a 2D pattern defined by ``new_height ``× ``new_width`` |
+
 ---
 ### Grid Analytics
+A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics. 
 
 | Function | Description |
 | --- | --- |
@@ -194,8 +188,10 @@ BigSpill is comprised of 10 modules:
 | **Histogramλ** | Generates a histogram using automatic binning rules |
 | **Modeλ** | Returns the most frequently occurring values or text entries |
 | **ZoneStatλ** | Aggregates values by zones determined by ``Histogramλ`` |
+
 ---
 ### Text
+This category provides operators that overcome common limitations in Excel's native text engine (e.g., ``TEXTSPLIT`` cannot spill 2D results; ``BYROW`` cannot deploy ``SORT`` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
 
 | Function | Description |
 | --- | --- |
@@ -207,8 +203,10 @@ BigSpill is comprised of 10 modules:
 | **NumbersOnlyλ** | Extracts numeric characters (0–9) |
 | **TextOnlyλ** | Extracts non‑numeric characters |
 | **Splitλ** | Splits text arrays into tokens and can return a 2D spill |
+
 ---
 ### Engineering
+Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native ``DEC2BIN`` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
 
 | Function | Description |
 | --- | --- |
@@ -217,8 +215,10 @@ BigSpill is comprised of 10 modules:
 | **BitCountλ** | Counts number of 1‑bits |
 | **Dec2Binλ** | Converts non‑negative integers → binary |
 | **Dec2Grayλ** | Converts non‑negative integers → Gray code |
+
 ---
 ### Combinatorics
+High‑performance generators for permutations, combinations, subsets, and related structures. 
 
 | Function | Description |
 | --- | --- |
@@ -230,8 +230,10 @@ BigSpill is comprised of 10 modules:
 | **KnapSackλ** | Solves subset‑sum / knapsack feasibility |
 | **SubsetGenλ** | Generates all subsets (power set) in binary‑mask order |
 | **SubsetSumλ** | Returns all subsets whose elements sum to a target |
+
 ---
 ### Diagnostics
+Functions whose purpose is to expose, annotate, or explain the internal structure of a grid. Diagnostics functions are used for debugging, introspection, visualization, and structural analysis.
 
 | Function | Description |
 | --- | --- |
