@@ -10,6 +10,8 @@
 7. Performance Notes
 8. Versioning Notes
    Appendix
+   	A. Onboarding Workbooks
+    B. Additional Resources
 
 
 ---
@@ -264,6 +266,9 @@ content
 
 ---
 ## Appendix
+
+### Onboarding Workbooks
+../onboarding/BigSpill%20-%20Starters.xlsx
 
 
 
