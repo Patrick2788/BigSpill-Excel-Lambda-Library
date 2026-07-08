@@ -364,15 +364,13 @@ Excel for the web includes partial LAMBDA functionality, but it has significant 
 - AFE modules may not load or resolve reliably  
 
 #### Other Versions and Applications - (Not Supported)
-BigSpill is primarily an Excel 365 library.  If the version is not listed as supported above, is is not compatible with BigSpill.  Additionally, there are no plans to make BigSpill compatible with other spreadsheet applications.
+BigSpill is designed for the modern Excel 365. Versions not listed above are not compatible. BigSpill is not intended for use with other spreadsheet applications, and there are no plans to support them.
 
 ---
 ## Appendix
 
 ### Onboarding Workbooks
-## Appendix
 
-### A. Onboarding Workbooks
 The following workbooks provide demonstrations of all functions in BigSpill. All workbooks include the entire BigSpill module.
 They are listed in the recommended learning order:
 
