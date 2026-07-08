@@ -338,7 +338,33 @@ content
 
 ---
 ## 8. Versioning Notes
-content
+
+### 8.1 Compatability
+#### Excel 365 (Windows & Mac) (Full Support - Recommended)
+
+All BigSpill functions run on:
+- Current Channel
+- Monthly Enterprise Channel
+- Semi‑Annual Enterprise Channel
+
+Excel 365 receives ongoing feature updates, including new dynamic array functions and Lambda helpers. Future BigSpill versions may rely on these updates.
+
+#### Excel 2024 - (Full Support as of July 2026)
+Excel 2024 includes all Lambda and dynamic array features available at the time of its release, and BigSpill is fully compatible with those features.
+
+Note:
+- Excel 2024 does not receive new functions after release.  
+- Future BigSpill versions may require features available only in Excel 365.
+
+#### Excel for the Web - (Not Supported) 
+Excel for the web includes partial LAMBDA functionality, but it has significant limitations:
+- ETA is not supported  
+- Implicit aggregation often fails  
+- Certain nested or recursive Lambdas do not evaluate correctly  
+- AFE modules may not load or resolve reliably  
+
+#### Other Versions and Applications - (Not Supported)
+BigSpill is primarily an Excel 365 library.  If the version is not listed as supported above, is is not compatible with BigSpill.  Additionally, there are no plans to make BigSpill compatible with other spreadsheet applications.
 
 ---
 ## Appendix
