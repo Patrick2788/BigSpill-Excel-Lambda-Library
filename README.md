@@ -42,7 +42,7 @@ If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) incl
 Start here:  [BigSpill Onboarding Workbooks](/onboarding) 
 
 ### Installation & Setup
-For installation instructions, module import steps, and verification procedures, please see [Installation & Setup](docs/User%20Manual.md#2-installation--setup) in the user manual.
+To install BigSpill, import the modules, and verify your environment, please see [Installation & Setup](docs/User%20Manual.md#2-installation--setup) in the user manual.
 
 ## License
 
