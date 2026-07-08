@@ -4,10 +4,7 @@
 
 ## Introduction
 
-BigSpill is a modular Excel LAMBDA library providing fast, efficient, and reliable functions for grid operations, data analysis, engineering, and text processing.  
-It is designed for users who want powerful, pickup‑and‑go functions without the need to write complex formulas.  
-BigSpill’s modular organization spans from primitives to mid‑level operators to developer‑level functions, giving users a consistent toolkit at every layer of complexity.  
-The library is built for modern Excel 365 and takes full advantage of the innovations introduced with dynamic arrays, LET, and LAMBDA.
+BigSpill is a modular Excel LAMBDA library offering elegant, fast, and efficient solutions for grid operations, data anlysis, and text processing. It is designed for users who want powerful, pickup-and-go functions without the need to write complex formulas. BigSpill includes primitives, mid-level operators, and developer-level functions. The library is built for modern Excel 365 and takes full advantage of the innovations introduced with dynamic arrays, LET, and LAMBDA.
 
 ## Modules
 
