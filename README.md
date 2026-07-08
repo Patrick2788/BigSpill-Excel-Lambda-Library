@@ -9,10 +9,6 @@ It is designed for users who want powerful, pickup‑and‑go functions without 
 BigSpill’s modular organization spans from primitives to mid‑level operators to developer‑level functions, giving users a consistent toolkit at every layer of complexity.  
 The library is built for modern Excel 365 and takes full advantage of the innovations introduced with dynamic arrays, LET, and LAMBDA.
 
-## **Getting Started**
-
-*Placeholder — content to go here.*
-
 ## **Modules**
 
 *Placeholder — module descriptions will go here.*
@@ -28,6 +24,13 @@ BigSpill requires the modern Excel calculation engine with full support for LAMB
 | Excel for the Web  |  Not Supported|
 
 \* _As of July 2026. Excel 2024 will not receive future updates and may not be supported in the future._
+
+## **Getting Started**
+
+### Quick Start
+If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) include the entire libray of functions with demonstrations of each function.
+
+
 
 
 ## **License**
