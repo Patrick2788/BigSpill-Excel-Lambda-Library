@@ -2,14 +2,14 @@
   <img src="assets/BigSpill Logo.png" alt="BigSpill Logo" width="320">
 </p>
 
-## **Introduction**
+## Introduction
 
 BigSpill is a modular Excel LAMBDA library providing fast, efficient, and reliable functions for grid operations, data analysis, engineering, and text processing.  
 It is designed for users who want powerful, pickup‑and‑go functions without the need to write complex formulas.  
 BigSpill’s modular organization spans from primitives to mid‑level operators to developer‑level functions, giving users a consistent toolkit at every layer of complexity.  
 The library is built for modern Excel 365 and takes full advantage of the innovations introduced with dynamic arrays, LET, and LAMBDA.
 
-## **Modules**
+## Modules
 
 BigSpill consists of 90 functions across 10 modules:
 | Module	| Description |
@@ -37,16 +37,16 @@ BigSpill requires the modern Excel calculation engine with full support for LAMB
 
 \* _As of July 2026. Excel 2024 will not receive future updates and may not be supported in the future._
 
-## **Getting Started**
+## Getting Started
 
 ### Quick Start
-If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) include the entire libray of functions with demonstrations of each function.
+If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) include the entire library of functions with demonstrations of each function.
 
-## **Installation & Setup**
+### Installation & Setup
+For installation instructions, module import steps, and verification procedures, see the Installation & Setup section of the User Manual:
 Please see https://github.com/Patrick2788/BigSpill/edit/main/docs/User%20Manual.md#2-installation--setup
 
-
-## **License**
+## License
 
 BigSpill is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for details.
