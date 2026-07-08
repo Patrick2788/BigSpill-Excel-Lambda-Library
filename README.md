@@ -37,7 +37,9 @@ BigSpill requires the modern Excel calculation engine with full support for LAMB
 ## Getting Started
 
 ### Quick Start
-If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) include the entire library of functions with demonstrations of each function.
+If you're using Excel 365, all [BigSpill Onboarding Workbooks](/onboarding) include the full library of functions along with demonstrations of each module and every function. These workbooks are the fastest way to explore BigSpill and begin using the tools immediately.
+
+Start here:  [BigSpill Onboarding Workbooks](/onboarding) 
 
 ### Installation & Setup
 For installation instructions, module import steps, and verification procedures, please see [Installation & Setup](docs/User%20Manual.md#2-installation--setup) in the user manual.
