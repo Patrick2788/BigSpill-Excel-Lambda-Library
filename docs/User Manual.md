@@ -1,18 +1,15 @@
 ## BigSpill User Manual
 
 ## Table of Contents
-1. Overview
-2. Installation & Setup
-3. Function Reference
-4. Errors
-5. Usage Patterns
-6. Multi-Step Examples
-7. Performance Notes
-8. Versioning Notes
-   Appendix
-   	A. Onboarding Workbooks
-    B. Additional Resources
-
+1. [Overview](#1-overview)
+2. [Installation & Setup](#2-installation--setup)
+3. [Function Reference](#3-function-reference)
+4. [Errors](#4-errors)
+5. [Usage Patterns](#5-usage-patterns)
+6. [Multi-Step Examples](#6-multi-step-examples)
+7. [Performance Notes](#7-performance-notes)
+8. [Versioning Notes](#8-versioning-notes)
+9. [Appendix](#9-appendix)
 
 ---
 ## 1. Overview
@@ -634,7 +631,7 @@ Excel for the web includes partial LAMBDA functionality, but it has significant 
 BigSpill is designed for the modern Excel 365. Versions not listed above are not compatible. BigSpill is not intended for use with other spreadsheet applications, and there are no plans to support them.
 
 ---
-## Appendix
+## 9. Appendix
 
 ### Onboarding Workbooks
 
