@@ -112,13 +112,11 @@ MGridλ
 Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
 #### Dependency Hierarchy
-```
-ReShape2Dλ
+```ReShape2Dλ
 └── Scan2Dλ
-    └── Traverseλ
 
 Traverseλ
-└── (primitive used by Scan2Dλ)
+└── Scan2Dλ
 
 ReSizeλ
 ├── TakeBlockλ
