@@ -475,6 +475,23 @@ Coalesceλ
 ### Engineering
 Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native `DEC2BIN` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
 
+#### Dependency Hierarchy
+```
+Explodeλ
+├── Bin2Decλ
+└── Bin2Grayλ
+
+Dec2Binλ
+├── BitCountλ
+└── Dec2Grayλ
+
+Bin2Grayλ
+└── Dec2Grayλ
+
+Dec2Grayλ
+└── (depends on Bin2Grayλ and Dec2Binλ)
+```
+
 | Function | Description |
 | --- | --- |
 | **Bin2Decλ** | Converts concise binary → decimal |
@@ -485,7 +502,22 @@ Binary, Gray‑code, and bit‑level utilities designed to operate well beyond E
 
 ---
 ### Combinatorics
-High‑performance generators for permutations, combinations, subsets, and related structures. 
+High‑performance generators for permutations, combinations, subsets, and related structures.
+
+#### Dependency Hierarchy
+```
+Enumerateλ
+├── PermRλ
+├── Permλ
+├── CombinationsRλ
+├── Combinationsλ
+└── Derangementsλ
+
+Dec2Binλ
+├── KnapSackλ
+├── SubsetGenλ
+└── SubsetSumλ
+```
 
 | Function | Description |
 | --- | --- |
