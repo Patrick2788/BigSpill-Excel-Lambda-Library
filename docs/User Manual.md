@@ -46,7 +46,7 @@ Note:
 - Always copy from the BigSpill workbook into the workbook that will receive BigSpill (Once you've verified installation, the blank sheet can be deleted from your workbook).
 - All BigSpill functions include a `λ` suffix, which prevents name conflicts when the above steps are performed.
 
-## 2.4 Requesting a Gist import URL (Advanced)
+### 2.4 Requesting a Gist import URL (Advanced)
 BigSpill can also be installed using the Advanced Formula Environment (AFE) by importing a private Gist that contains the full module. This installation method is intended for developers.
 
 The Gist URL is not included in this manual. Access may be granted upon request.
@@ -57,6 +57,17 @@ This section provides a complete, module‑ordered catalog of all BigSpill funct
 
 ---
 ### Gridwork
+
+#### Dependency Hierarchy
+```
+Resizeλ
+├── CGridλ
+│   ├── DGridλ
+│   └── PolarGridλ
+├── MGridλ
+└── TGridλ
+```
+
 The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid. 
 
 | Function | Description |
@@ -68,7 +79,26 @@ The foundational coordinate systems for 2D arrays. Each function produces a cent
 | **PolarGridλ**	| Polar coordinates: radial distance and angle (`ATAN2`) |
 
 ---
+
 ### Grid Geometry
+#### Dependency Hierarchy
+
+```
+Squeezeλ
+├── Circleλ
+├── Diamondλ
+├── Plusλ
+├── Squareλ
+└── Triangleλ
+
+CGridλ
+└── (shared dependency with Squeezeλ)
+
+MGridλ
+├── Pyramidλ
+└── Ringλ
+```
+
 A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
 
 | Function | Description |
@@ -83,6 +113,56 @@ A family of geometric extraction operators for 2D arrays. Each function returns 
 
 ---
 ### 2D Array Shaping
+
+#### Dependency Hierarchy
+```
+ReShape2Dλ
+└── Scan2Dλ
+    └── Traverseλ
+
+Traverseλ
+└── (primitive used by Scan2Dλ)
+
+ReSizeλ
+├── TakeBlockλ
+├── UnPivotλ
+└── Zoomλ
+
+MGridλ
+└── TakeBlockλ
+
+Echoλ
+├── WrapRows2Dλ
+└── WrapCols2Dλ
+
+ValidateStaircaseλ
+└── Staircaseλ
+
+RepeatRowsλ
+└── UnPivotλ
+
+InsulateRowsλ
+├── UnPivotλ
+└── Padλ
+
+InsulateColsλ
+└── Padλ
+
+DGridλ
+└── SliceByDegλ
+
+DeleteWhereλ
+└── SliceByDegλ
+
+Padλ
+└── (depends on InsulateRowsλ and InsulateColsλ)
+
+Magnifyλ
+└── (no dependencies)
+
+Zipλ
+└── (no dependencies)
+```
 Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
 #### Core Shaping Primitives
@@ -322,6 +402,8 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 | #VALUE-ITEM! | Item values are invalid. |
 | #VALUE-WEIGHTS! | Weights are invalid. |
 | #WIDTH! | Invalid width parameter. |
+
+
 
 
 ---
