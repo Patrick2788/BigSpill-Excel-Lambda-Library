@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="assets/BigSpill Logo.png" alt="BigSpill Logo" width="320">
+  <img src="assets/BigSpillLogo.png" alt="BigSpill Logo" width="320">
 </p>
 
 ## Introduction
