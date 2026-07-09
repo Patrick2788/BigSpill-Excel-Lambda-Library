@@ -57,6 +57,7 @@ This section provides a complete, module‑ordered catalog of all BigSpill funct
 
 ---
 ### Gridwork
+The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid. 
 
 #### Dependency Hierarchy
 ```
@@ -67,9 +68,6 @@ Resizeλ
 ├── MGridλ
 └── TGridλ
 ```
-
-The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid. 
-
 | Function | Description |
 |---------|-------------|
 | **DGridλ**   |    Direction grid (0°-360°) using centered Cartesian axes |
@@ -81,8 +79,9 @@ The foundational coordinate systems for 2D arrays. Each function produces a cent
 ---
 
 ### Grid Geometry
-#### Dependency Hierarchy
+A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
 
+#### Dependency Hierarchy
 ```
 Squeezeλ
 ├── Circleλ
@@ -98,9 +97,6 @@ MGridλ
 ├── Pyramidλ
 └── Ringλ
 ```
-
-A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
-
 | Function | Description |
 |---------|-------------|
 | **Circleλ** | Circular region by target or {row, col} center |
@@ -113,6 +109,7 @@ A family of geometric extraction operators for 2D arrays. Each function returns 
 
 ---
 ### 2D Array Shaping
+Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
 #### Dependency Hierarchy
 ```
@@ -163,8 +160,6 @@ Magnifyλ
 Zipλ
 └── (no dependencies)
 ```
-Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
-
 #### Core Shaping Primitives
 
 | Function | Description |
@@ -206,6 +201,70 @@ Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while pr
 ### Grid Algebra
 A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
 
+#### Dependency Hierarchy
+```
+Streakλ
+├── DeleteRowsλ
+├── DeleteColsλ
+└── KeepRowsλ
+    └── KeepColsλ
+
+Countdownλ
+├── DeleteRowsλ
+├── DeleteColsλ
+└── KeepRowsλ
+    └── KeepColsλ
+
+DeleteWhereλ
+└── SliceByDegλ
+    └── (depends on DGridλ)
+
+Pinchλ
+└── (no dependencies)
+
+Removeλ
+└── (no dependencies)
+
+Squeezeλ
+└── (no dependencies)
+
+Magnifyλ
+└── KroneckerProdλ
+
+ReSizeλ
+├── KroneckerProdλ
+├── ShiftRowsλ
+├── ShiftColsλ
+└── Convolveλ
+
+Explodeλ
+└── Shiftλ
+    ├── ShiftRowsλ
+    └── ShiftColsλ
+
+MGridλ
+├── ShiftRowsλ
+└── ShiftColsλ
+
+Excludeλ
+└── (no dependencies)
+
+Snapλ
+└── (no dependencies)
+
+Embedλ
+└── (no dependencies)
+
+ValidateBlockMapλ
+└── BlockMapλ
+
+Alignλ
+└── Foldλ
+
+Join2Dλ
+└── (no dependencies)
+
+```
 #### Deletion
 
 | Function | Description |
@@ -258,6 +317,21 @@ A toolkit for structural editing of 2D arrays. These operators support deletion,
 ---
 ### Repetition
 Functions that replicate arrays along rows, columns, or both.
+
+#### Dependency Hierarchy
+```
+Echoλ
+└── (no dependencies)
+
+RepeatRowsλ
+└── (no dependencies)
+
+RepeatColsλ
+└── (no dependencies)
+
+TGridλ
+└── Tessellateλ
+```
 
 | Function | Description |
 | --- | --- |
