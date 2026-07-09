@@ -112,7 +112,8 @@ MGridλ
 Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
 #### Dependency Hierarchy
-```ReShape2Dλ
+```
+ReShape2Dλ
 └── Scan2Dλ
 
 Traverseλ
@@ -340,7 +341,64 @@ TGridλ
 
 ---
 ### Grid Analytics
-A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics. 
+A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics.
+
+#### Dependency Hierarchy
+```
+Streakλ
+├── DeleteRowsλ
+├── DeleteColsλ
+└── KeepRowsλ
+    └── KeepColsλ
+
+Countdownλ
+├── DeleteRowsλ
+├── DeleteColsλ
+└── KeepRowsλ
+    └── KeepColsλ
+
+ValidateDiagλ
+├── ByDiagλ
+├── DiagMapλ
+└── DiagIndexλ
+
+ByDiagλ
+├── DiagMapλ
+└── DiagIndexλ
+
+Echoλ
+└── Pairwiseλ
+
+Resizeλ
+└── Pairwiseλ
+
+ValidateGDλ
+└── GroupbyDateλ
+
+RepeatRowsλ
+└── PivotbyCatλ
+
+Streakλ
+└── PivotbyCatλ
+
+Histogramλ
+└── ZoneStatλ
+
+Grainλ
+└── (no dependencies)
+
+MooreAggλ
+└── (no dependencies)
+
+MooreSelectλ
+└── (no dependencies)
+
+Modeλ
+└── (no dependencies)
+
+GroupbyBinλ
+└── (no dependencies)
+```
 
 | Function | Description |
 | --- | --- |
@@ -378,6 +436,29 @@ A collection of functions for elegant sequencing, categorical analysis, neighbor
 ---
 ### Text
 This category provides operators that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
+
+#### Dependency Hierarchy
+```
+RegexSafeλ
+└── Splitλ
+    └── Alignλ
+        ├── AlignDistinctλ
+        └── AlignUniqueλ
+
+Explodeλ
+├── NumbersOnlyλ
+└── TextOnlyλ
+
+MGridλ
+└── Explodeλ
+
+Resizeλ
+└── Explodeλ
+
+Coalesceλ
+└── (no dependencies)
+
+```
 
 | Function | Description |
 | --- | --- |
