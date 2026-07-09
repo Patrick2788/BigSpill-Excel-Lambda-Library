@@ -1,15 +1,15 @@
 ## BigSpill User Manual
 
 ## Table of Contents
-1. [Overview](#1-overview)
-2. [Installation & Setup](#2-installation--setup)
-3. [Function Reference](#3-function-reference)
-4. [Errors](#4-errors)
-5. [Usage Patterns](#5-usage-patterns)
-6. [Multi-Step Examples](#6-multi-step-examples)
-7. [Performance Notes](#7-performance-notes)
-8. [Versioning Notes](#8-versioning-notes)
-9. [Appendix](#9-appendix)
+1. Overview
+2. Installation & Setup
+3. Function Reference
+4. Errors
+5. Usage Patterns
+6. Multi-Step Examples
+7. Performance Notes
+8. Versioning Notes
+9. Appendix
 
 ---
 ## 1. Overview
@@ -648,6 +648,7 @@ They are listed in the recommended learning order:
 - [07 – BigSpill – Engineering](<onboarding/07 - BigSpill - Engineering.xlsx>)
 - [08 – BigSpill – Combinatorics](<onboarding/08 - BigSpill - Combinatorics.xlsx>)
 - [09 – BigSpill – Diagnostics](<onboarding/09 - BigSpill - Diagnostics.xlsx>)
+
 
 
 
