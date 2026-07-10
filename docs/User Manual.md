@@ -720,6 +720,8 @@ Output:
 
 #### 5.4 Perform a circular shift on a tuple to create distinct shifts
 
+Shiftλ rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
+
 Formula:
 ```Excel
 =Shiftλ(12345,SEQUENCE(5))
