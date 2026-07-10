@@ -718,6 +718,24 @@ Output:
 
 ```
 
+#### 5.4 Perform a circular shift on a tuple to create distinct shifts
+
+Formula:
+```Excel
+=Shiftλ(12345,SEQUENCE(5))
+```
+
+Output:
+```text
+{"2","3","4","5","1";
+ "3","4","5","1","2";
+ "4","5","1","2","3";
+ "5","1","2","3","4";
+ "1","2","3","4","5"}
+```
+
+`{1,2,3,4,5}` may also be supplied to yield the same results.
+
 
 ---
 ## 6. Multi-Step Examples
