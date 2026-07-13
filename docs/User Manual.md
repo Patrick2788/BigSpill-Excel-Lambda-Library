@@ -738,6 +738,31 @@ Output:
 
 `{1,2,3,4,5}` may also be supplied to yield the same results.
 
+#### 5.5 Split and Fold
+
+Splitλ converts the 1D array to a 2D array of colors. Foldλ provides an aggregate COUNTA of colors where order of colors does not matter.
+
+Colors=
+```Text
+{"red,green,blue";
+"blue,green,red";
+"yellow,yellow,yellow";
+"green,red,blue";
+"yellow,yellow,yellow";
+"navy,white,black"}
+```
+Formula:
+```Excel
+=Foldλ(Splitλ(colors,","))
+```
+
+Output:
+```Text
+{"black","navy","white",1;
+ "blue","green","red",3;
+ "yellow","yellow","yellow",2}
+```
+
 
 ---
 ## 6. Multi-Step Examples
