@@ -788,6 +788,39 @@ Output:
 "Bobby","Math","A";
 "Jose","Math","A"}
 ```
+#### 5.7 Downsample a matrix
+
+Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or LAMBDA.
+
+Matrix=
+```Text
+{345,459,931,924,206,711;
+ 997,357,425,778,844,839;
+ 927,675,277,646,843,533;
+ 489,647,253,657,141,193;
+ 137,290,266,423,546,651;
+ 903,455,234,357,257,870}
+````
+Formula:
+```Excel
+=Grainλ(Matrix,2,3,MAX)
+```
+Output:
+```Text
+{997,924;
+ 927,843;
+ 903,870}
+```
+Formula:
+```Excel
+=Grainλ(Matrix,2,3,LAMBDA(v,MAX(v)-MIN(v)))
+```
+Output:
+```Text
+{652,718;
+ 674,702;
+ 766,613}
+```
 
 ---
 ## 6. Multi-Step Examples
