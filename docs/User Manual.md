@@ -790,7 +790,7 @@ Output:
 ```
 #### 5.7 Downsample a matrix
 
-Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or LAMBDA.
+Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom LAMBDA.
 
 Matrix=
 ```Text
