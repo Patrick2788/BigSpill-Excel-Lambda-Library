@@ -758,11 +758,36 @@ Formula:
 
 Output:
 ```Text
-{"black","navy","white",1;
- "blue","green","red",3;
+{"black","navy","white",	1;
+ "blue","green",  "red",		3;
  "yellow","yellow","yellow",2}
 ```
+#### 5.6 Snap Filtering
 
+Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
+
+Grades=
+````
+{"Bobby","History","B";
+ "Deb","Physics","A";
+"Charlie","History","A";
+"Charlie","Chemistry","C";
+"Bobby","Math","A";
+"Willy","Chemistry","B";
+"Jose","Math","A";
+"Bobby","English","B"}
+````
+Formula:
+```Excel
+=Snapλ(Grades,"A")
+```
+Output:
+```Text
+{"Deb","Physics","A";
+"Charlie","History","A";
+"Bobby","Math","A";
+"Jose","Math","A"}
+```
 
 ---
 ## 6. Multi-Step Examples
