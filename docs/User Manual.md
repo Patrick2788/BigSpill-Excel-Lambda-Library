@@ -628,28 +628,59 @@ Output:
 "1","2","4","6","6","7","7","8","10","10";
 "1","1","2","2","3","5","6","6","8","10"}
 ```
+#### 5.2 Snap Filtering
 
-#### 5.2 Diamond Sum
+Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
 
-`Grid` =
-```text
-{9,6,9,4,5;
-6,8,5,10,1;
-3,1,1,10,7;
-7,3,3,3,7;
-2,2,2,5,1}
+Grades=
+````
+{"Bobby","History","B";
+ "Deb","Physics","A";
+"Charlie","History","A";
+"Charlie","Chemistry","C";
+"Bobby","Math","A";
+"Willy","Chemistry","B";
+"Jose","Math","A";
+"Bobby","English","B"}
+````
+Formula:
+```Excel
+=Snapλ(Grades,"A")
+```
+Output:
+```Text
+{"Deb","Physics","A";
+"Charlie","History","A";
+"Bobby","Math","A";
+"Jose","Math","A"}
+```
+
+#### 5.3 Split and Fold
+
+Splitλ converts the 1D array to a 2D array of colors. Foldλ provides an aggregate COUNTA of colors where order of colors does not matter.
+
+Colors=
+```Text
+{"red,green,blue";
+"blue,green,red";
+"yellow,yellow,yellow";
+"green,red,blue";
+"yellow,yellow,yellow";
+"navy,white,black"}
 ```
 Formula:
 ```Excel
-=SUM(+Diamondλ(Grid,{3,3},2))
+=Foldλ(Splitλ(colors,","))
 ```
 
 Output:
-`65`
+```Text
+{"black","navy","white",	1;
+ "blue","green",  "red",		3;
+ "yellow","yellow","yellow",2}
+```
 
-The `+` is used to coerce the result of `Diamondλ`into an array before being evaluated by `SUM`.
-
-#### 5.3 Generate a deck of cards from two vectors
+#### 5.4 Generate a deck of cards from two vectors
 
 `Rank` =
 ```text
@@ -720,7 +751,7 @@ Output:
 
 ```
 
-#### 5.4 Perform a circular shift on a tuple to create distinct shifts
+#### 5.5 Perform a circular shift on a tuple to create distinct shifts
 
 Shiftλ rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
 
@@ -740,56 +771,26 @@ Output:
 
 `{1,2,3,4,5}` may also be supplied to yield the same results.
 
-#### 5.5 Split and Fold
+#### 5.6 Diamond Sum
 
-Splitλ converts the 1D array to a 2D array of colors. Foldλ provides an aggregate COUNTA of colors where order of colors does not matter.
-
-Colors=
-```Text
-{"red,green,blue";
-"blue,green,red";
-"yellow,yellow,yellow";
-"green,red,blue";
-"yellow,yellow,yellow";
-"navy,white,black"}
+`Grid` =
+```text
+{9,6,9,4,5;
+6,8,5,10,1;
+3,1,1,10,7;
+7,3,3,3,7;
+2,2,2,5,1}
 ```
 Formula:
 ```Excel
-=Foldλ(Splitλ(colors,","))
+=SUM(+Diamondλ(Grid,{3,3},2))
 ```
 
 Output:
-```Text
-{"black","navy","white",	1;
- "blue","green",  "red",		3;
- "yellow","yellow","yellow",2}
-```
-#### 5.6 Snap Filtering
+`65`
 
-Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
+The `+` is used to coerce the result of `Diamondλ`into an array before being evaluated by `SUM`.
 
-Grades=
-````
-{"Bobby","History","B";
- "Deb","Physics","A";
-"Charlie","History","A";
-"Charlie","Chemistry","C";
-"Bobby","Math","A";
-"Willy","Chemistry","B";
-"Jose","Math","A";
-"Bobby","English","B"}
-````
-Formula:
-```Excel
-=Snapλ(Grades,"A")
-```
-Output:
-```Text
-{"Deb","Physics","A";
-"Charlie","History","A";
-"Bobby","Math","A";
-"Jose","Math","A"}
-```
 #### 5.7 Downsample a matrix
 
 Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom LAMBDA.
