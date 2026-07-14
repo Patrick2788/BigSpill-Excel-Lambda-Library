@@ -834,7 +834,7 @@ Output:
 
 #### 6.1 Clean-up and Re-Map
 
-Pinch removes blank rows and columns. BlockMap re-tiles by specifying block size in depth x width.
+Pinchλ removes blank rows and columns. BlockMapλ re-tiles by specifying block size in depth x width.
 `Data`=
 ```Text
 {"Jon Doe",        "", "Deb Smith",        "", "Ned Johnson";
