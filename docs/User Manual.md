@@ -837,6 +837,7 @@ Output:
 #### 6.1 Clean-up and Re-Map
 
 Pinchλ removes blank rows and columns. BlockMapλ re-tiles by specifying block size in depth x width.
+
 `Data`=
 ```Text
 {"Jon Doe",        "", "Deb Smith",        "", "Ned Johnson";
@@ -917,6 +918,62 @@ Output:
 25,50,8;
 50,75,11;
 75,100,14}
+```
+#### 6.3 Create an Auto-Number and Switch Existing Columns
+
+With the given data the goal is create a helpful CompanyCode which includes and instance number (e.g. NS1, NS2, NS3, etc.).
+
+`Products`=
+```Text
+{"Nexora Solutions","NS","Sprocket",12.99;
+"Nexora Solutions","NS","Widget",15.49;
+"Nexora Solutions","NS","Gadget",9.99;
+"Vibrantix Corp","VC","Cog",14.99;
+"Vibrantix Corp","VC","Gear",19.99;
+"AetherWave Inc","AW","Bolt",7.99;
+"AetherWave Inc","AW","Nut",6.49;
+"AetherWave Inc","AW","Screw",5.99;
+"AetherWave Inc","AW","Washer",3.99;
+"QuantumLeap LLC","QL","Lever",11.49;
+"QuantumLeap LLC","QL","Pulley",13.99}
+```
+
+`CompanyCode`=
+```Text
+{"NS";
+ "NS";
+ "NS";
+ "VC";
+ "VC";
+ "AW";
+ "AW";
+ "AW";
+ "AW";
+ "QL";
+ "QL"}
+```
+This formula creates an `autonum` with `Streakλ`.`Removeλ` then pulls the second column from `Products`. `Embedλ` inserts `autonum` into `rev_products` as the second column.
+```Excel
+=LET(
+     autonum, Streakλ(CompanyCode, , TRUE),
+     rev_products, Removeλ(Products, , 2),
+     new_products, Embedλ(rev_products, autonum, , 2),
+     new_products)
+```
+
+Output:
+```
+{"Nexora Solutions","NS·1","Sprocket",12.99;
+"Nexora Solutions","NS·2","Widget",15.49;
+"Nexora Solutions","NS·3","Gadget",9.99;
+"Vibrantix Corp","VC·1","Cog",14.99;
+"Vibrantix Corp","VC·2","Gear",19.99;
+"AetherWave Inc","AW·1","Bolt",7.99;
+"AetherWave Inc","AW·2","Nut",6.49;
+"AetherWave Inc","AW·3","Screw",5.99;
+"AetherWave Inc","AW·4","Washer",3.99;
+"QuantumLeap LLC","QL·1","Lever",11.49;
+"QuantumLeap LLC","QL·2","Pulley",13.99}
 ```
 
 ---
