@@ -842,7 +842,7 @@ Pinchλ removes blank rows and columns. BlockMapλ re-tiles by specifying block 
 ```Text
 {"Jon Doe",        "", "Deb Smith",        "", "Ned Johnson";
  "Senior VP",      "", "HR manager",       "", "Data Analyst";
- "jdoe@example.com","", "dsmith@example.com",0, "njohnson@example.com";
+ "jdoe@example.com","", "dsmith@example.com","", "njohnson@example.com";
  "", "", "", "", "";
  "", "", "", "", "";
  "Peg Bailey",     "", "Randolph Wilkens", "", "Jose Alvarado";
