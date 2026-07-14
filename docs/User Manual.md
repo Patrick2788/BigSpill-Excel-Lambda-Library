@@ -831,7 +831,39 @@ Output:
 
 ---
 ## 6. Multi-Step Examples
-content
+
+#### 6.1 Clean-up and Re-Map
+
+Pinch removes blank rows and columns. BlockMap re-tiles by specifying block size in depth x width.
+`Data`=
+```Text
+{"Jon Doe",        "", "Deb Smith",        "", "Ned Johnson";
+ "Senior VP",      "", "HR manager",       "", "Data Analyst";
+ "jdoe@example.com","", "dsmith@example.com",0, "njohnson@example.com";
+ "", "", "", "", "";
+ "", "", "", "", "";
+ "Peg Bailey",     "", "Randolph Wilkens", "", "Jose Alvarado";
+ "Data Analyst",   "", "Legal Advisor",    "", "CEO";
+ "pbailey@example.com","", "rwilkens@example.com","", "Jose@example.com"}
+
+```
+
+```Excel
+=LET(
+    cleaned, Pinchλ(Data),
+    remapped, BlockMapλ(cleaned, 3, 1),
+    remapped)
+```
+Output:
+```Text
+{"Jon Doe",        "Senior VP",      "jdoe@example.com";
+ "Deb Smith",      "HR manager",     "dsmith@example.com";
+ "Ned Johnson",    "Data Analyst",   "njohnson@example.com";
+ "Peg Bailey",     "Data Analyst",   "pbailey@example.com";
+ "Randolph Wilkens","Legal Advisor", "rwilkens@example.com";
+ "Jose Alvarado",  "CEO",            "Jose@example.com"}
+
+```
 
 ---
 ## 7. Performance Notes
