@@ -19,6 +19,13 @@
 ## 1. Overview
 content
 
+## ?. Developer's Philosophy
+My approach with BigSpill and to the grid in general is simple:
+- Use as a few inputs as possible and always spill. Fewer inputs = fewer chances for formulas to break.
+- Avoid flattening 2D arrays whenever possible.  There's a developer's trap when working with 2D arrays where the array is flattened and inevitably re-shaped.  This usually introduces added calculation costs and overhead.  BigSpill works with pure row/column indices to take what is needed from a 2D array. `BlockMapλ` and `Grainλ` are examples of this philosophy.
+- Quality-of-life functions are worth generalizing. Prime examples of this are `Excludeλ` and `Snapλ`. These functions are simplified versions of FILTER where the array and include/exclude criteria are provided.  I developed these functions when I was reading Microsoft's Feedback Portal and a user had requested a simplified FILTER where a boolean vector was not required.
+- Generalize operations that are used repeatedly. `Resizeλ` which repeats a 2D array horizontally and/or vertically, is called by 11 BigSpill functions. `MGridλ` (Generates row/column indices) is one of those functions and it in turn is called by 6 BigSpill functions.  
+
 ---
 ## 2. Installation & Setup
 
