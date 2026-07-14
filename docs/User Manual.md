@@ -921,7 +921,7 @@ Output:
 ```
 #### 6.3 Create an Auto-Number and Switch Existing Columns
 
-With the given data the goal is create a helpful CompanyCode which includes and instance number (e.g. NS1, NS2, NS3, etc.).
+This example shows how to generate auto‑numbered company codes and restructure an existing dataset using Streakλ, Removeλ, and Embedλ.
 
 `Products`=
 ```Text
@@ -952,7 +952,9 @@ With the given data the goal is create a helpful CompanyCode which includes and 
  "QL";
  "QL"}
 ```
-This formula creates an `autonum` with `Streakλ`.`Removeλ` then pulls the second column from `Products`. `Embedλ` inserts `autonum` into `rev_products` as the second column.
+This formula creates an `autonum` with `Streakλ`.
+`Removeλ` then pulls the second column from `Products`. 
+`Embedλ` inserts `autonum` into `rev_products` as the second column.
 ```Excel
 =LET(
      autonum, Streakλ(CompanyCode, , TRUE),
