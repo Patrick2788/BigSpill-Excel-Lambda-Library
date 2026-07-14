@@ -17,7 +17,7 @@
 
 ---
 ## 1. Welcome
-BigSpill builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, LAMBDA, LET) and the plethora of new functions introduced in the past 8 years. This library exists to bring the power of Excel, where most anything is possible (within reason), to the user without the complexity.
+BigSpill builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, LAMBDA, LET) and the plethora of new functions added in the past 8 years. This library exists to bring the power of Excel, where most anything is possible (within reason), to the user without the complexity.
 
 BigSpill's audience is everyone from beginners who want easy-to-use and reliable functions to developers that want building blocks. Whether you learn by exploring or by reading step‑by‑step, you’re in the right place.
 
