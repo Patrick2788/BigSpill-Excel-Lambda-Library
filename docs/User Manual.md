@@ -474,6 +474,7 @@ Coalesceλ
 | **TextOnlyλ** | Extracts non‑numeric characters |
 | **Splitλ** | Splits text arrays into tokens and can return a 2D spill |
 
+Note: `NumbersOnlyλ` is strict - it extracts only characters whose CODE() is numeric. Mixed values such as "30.25A" become "3025" because non‑numeric characters (like "." or "A") are removed rather than interpreted.
 ---
 ### Engineering
 Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native `DEC2BIN` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
