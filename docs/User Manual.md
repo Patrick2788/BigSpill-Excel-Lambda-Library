@@ -592,13 +592,12 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 | #WIDTH! | Invalid width parameter. |
 
 
-
-
 ---
 ## 5. Usage Patterns
-content
 
-#### 5.1 Split a 1D array into a 2D array and sort row-wise
+#### 5.1 Split and Sort
+
+`Splitλ` converts a 1D array of strings into a 2D array and then `Alignλ` sorts it row-wise.
 
  `Strings` =
 
@@ -628,7 +627,7 @@ Output:
 "1","2","4","6","6","7","7","8","10","10";
 "1","1","2","2","3","5","6","6","8","10"}
 ```
-#### 5.2 Snap Filtering
+#### 5.2 Easy Filtering
 
 Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
 
@@ -680,7 +679,8 @@ Output:
  "yellow","yellow","yellow",2}
 ```
 
-#### 5.4 Generate a deck of cards from two vectors
+#### 5.4 Cartesian Product: Deck of Cards
+`Pairwiseλ` creates a deck of card cards from rank and suit.
 
 `Rank` =
 ```text
@@ -751,7 +751,7 @@ Output:
 
 ```
 
-#### 5.5 Perform a circular shift on a tuple to create distinct shifts
+#### 5.5 Circular Shift
 
 Shiftλ rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
 
@@ -772,6 +772,8 @@ Output:
 `{1,2,3,4,5}` may also be supplied to yield the same results.
 
 #### 5.6 Diamond Sum
+
+`Diamondλ` extracts the shape from the grid and SUM obtains the total.
 
 `Grid` =
 ```text
