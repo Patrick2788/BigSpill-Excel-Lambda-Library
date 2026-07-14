@@ -595,6 +595,8 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 ---
 ## 5. Usage Patterns
 
+Included are several examples illustrating the possibilities available with BigSpill.
+
 #### 5.1 Split and Sort
 
 `Splitλ` converts a 1D array of strings into a 2D array and then `Alignλ` sorts it row-wise.
@@ -615,8 +617,7 @@ Formula:
 =LET(
     arr, --Splitλ(Strings, ", "),
     sorted, Alignλ(arr),
-    sorted
-)
+    sorted)
 ```
 Output:
 
@@ -627,6 +628,7 @@ Output:
 "1","2","4","6","6","7","7","8","10","10";
 "1","1","2","2","3","5","6","6","8","10"}
 ```
+┈┈┈┈┈┈┈┈┈┈┈
 #### 5.2 Easy Filtering
 
 Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
@@ -653,7 +655,7 @@ Output:
 "Bobby","Math","A";
 "Jose","Math","A"}
 ```
-
+┈┈┈┈┈┈┈┈┈┈┈
 #### 5.3 Split and Fold
 
 Splitλ converts the 1D array to a 2D array of colors. Foldλ provides an aggregate COUNTA of colors where order of colors does not matter.
@@ -678,8 +680,8 @@ Output:
  "blue","green",  "red",		3;
  "yellow","yellow","yellow",2}
 ```
-
-#### 5.4 Cartesian Product: Deck of Cards
+┈┈┈┈┈┈┈┈┈┈┈
+#### 5.4 Cartesian Product
 `Pairwiseλ` creates a deck of card cards from rank and suit.
 
 `Rank` =
@@ -750,7 +752,7 @@ Output:
  2   , "♣"}
 
 ```
-
+┈┈┈┈┈┈┈┈┈┈┈
 #### 5.5 Circular Shift
 
 Shiftλ rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
@@ -770,7 +772,7 @@ Output:
 ```
 
 `{1,2,3,4,5}` may also be supplied to yield the same results.
-
+┈┈┈┈┈┈┈┈┈┈┈
 #### 5.6 Diamond Sum
 
 `Diamondλ` extracts the shape from the grid and SUM obtains the total.
@@ -792,7 +794,7 @@ Output:
 `65`
 
 The `+` is used to coerce the result of `Diamondλ`into an array before being evaluated by `SUM`.
-
+┈┈┈┈┈┈┈┈┈┈┈
 #### 5.7 Downsample a matrix
 
 Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom LAMBDA.
