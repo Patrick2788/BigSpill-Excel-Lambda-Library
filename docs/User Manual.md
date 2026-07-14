@@ -847,12 +847,12 @@ Pinchλ removes blank rows and columns. BlockMapλ re-tiles by specifying block 
  "pbailey@example.com","", "rwilkens@example.com","", "Jose@example.com"}
 
 ```
-
+Formula:
 ```Excel
 =LET(
-    cleaned, Pinchλ(Data),
-    remapped, BlockMapλ(cleaned, 3, 1),
-    remapped)
+     cleaned, Pinchλ(Data),
+     remapped, BlockMapλ(cleaned, 3, 1),
+     remapped)
 ```
 Output:
 ```Text
@@ -863,6 +863,57 @@ Output:
  "Randolph Wilkens","Legal Advisor", "rwilkens@example.com";
  "Jose Alvarado",  "CEO",            "Jose@example.com"}
 
+```
+6.2 Inspect, Extract, and Analyze
+
+The goal is to obtain a binned analysis of numerical data with `Histogramλ`.
+
+The challenge is the data is not clean and contains various footnote characters.  The original data cannot be altered and must be preserved.
+
+MessyData=
+```Text
+{2,"89₁",45,31,20;
+17,36,"9₂",6,15;
+44,100,78,63,15;
+75,41,80,80,91;
+99,1.2,"52₃",74,10;
+13,66,84,61,"62₄";
+15,4,85,12,81;
+"77₅",47,66,90,"99†";
+75,66,89,12,35;
+13,18,"1‡",28,53}
+```
+Revealλ is used to inspect the data.
+```Excel
+=Revealλ(MessyData)
+```
+The result confirms not all data is numerical.
+```Text
+{"Number",43;
+"Text",7;
+"Contains special characters",7;
+"Number-stored-as-text",0;
+"Error",0;
+"Contains spaces",0;
+"Formula",0;
+"Blank",0;
+"Logical",0}
+```
+The workaround is to extract only the numbers from the data set and then obtain the analysis with `Histogramλ` using a `bin_width` = 25.
+```Excel
+=LET(
+     numbers, NumbersOnlyλ(MessyData),
+     hist, Histogramλ(numbers, 25),
+     hist)
+```
+Output:
+```
+{"Start","End","Total";
+"<",0,0;
+0,25,17;
+25,50,8;
+50,75,11;
+75,100,14}
 ```
 
 ---
