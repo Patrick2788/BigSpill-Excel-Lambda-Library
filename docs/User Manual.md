@@ -978,6 +978,42 @@ Output:
 "QuantumLeap LLC","QL·2","Pulley",13.99}
 ```
 
+#### 6.4 Party of the First Party
+
+In the classic role playing game Final Fantasy, there are six classes to choose from to fill out a party of four at the start of the game.
+
+List all possible parties without repetition that include a Red Mage.
+
+`Classes`=
+```Text
+{"Fighter";"Black Belt";"Thief";"Red Mage";"White Mage";"Black Mage"}
+```
+
+Formula:
+```Excel
+=LET(
+     parties, Combinationsλ(Classes, 4),
+     filtered, Snapλ(parties, "Red Mage"),
+     filtered)
+```
+Combinationsλ generates all possible combinations without replacement. Snapλ is a convenient way to filter for parties including a Red Mage.
+
+Output:
+```Text
+{"Fighter","Black Belt","Thief","Red Mage";
+"Fighter","Black Belt","Red Mage","White Mage";
+"Fighter","Black Belt","Red Mage","Black Mage";
+"Fighter","Thief","Red Mage","White Mage";
+"Fighter","Thief","Red Mage","Black Mage";
+"Fighter","Red Mage","White Mage","Black Mage";
+"Black Belt","Thief","Red Mage","White Mage";
+"Black Belt","Thief","Red Mage","Black Mage";
+"Black Belt","Red Mage","White Mage","Black Mage";
+"Thief","Red Mage","White Mage","Black Mage"}
+```
+
+
+
 ---
 ## 7. Performance Notes
 content
