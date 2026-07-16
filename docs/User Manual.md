@@ -992,7 +992,7 @@ List all possible parties without repetition that do not include a Thief.
 Formula:
 ```Excel
 =LET(
-    parties, Combinationsλ(C4:C9, 4),
+    parties, Combinationsλ(Classes, 4),
     filtered, Excludeλ(parties, "Thief"),
     filtered)
 ```
