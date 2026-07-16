@@ -996,7 +996,7 @@ Formula:
     filtered, Excludeλ(parties, "Thief"),
     filtered)
 ```
-Combinationsλ generates all possible combinations without replacement. Snapλ is a convenient way to filter for parties including a Red Mage.
+Combinationsλ generates all possible combinations without replacement. Excludeλ is a convenient way to filter out parties which include a Thief.
 
 Output:
 ```Text
