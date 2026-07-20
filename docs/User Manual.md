@@ -17,7 +17,7 @@
 
 ---
 ## 1. Welcome
-BigSpill builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, LAMBDA, LET) and the plethora of new functions added in the past 8 years. This library exists to bring the power of Excel, where most anything is possible (within reason), to the user without the complexity.
+**BigSpill** builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, LAMBDA, LET) and the plethora of new functions added in the past 8 years. This library exists to bring the power of Excel, where most anything is possible (within reason), to the user without the complexity.
 
 BigSpill's audience is everyone from beginners who want easy-to-use and reliable functions to developers that want building blocks. Whether you learn by exploring or by reading step‑by‑step, you’re in the right place.
 
@@ -56,7 +56,7 @@ The Gist URL is not included in this manual. Access may be granted upon request.
 
 ---
 ## 3. Function Reference
-This section provides a complete, module‑ordered catalog of all BigSpill functions, along with short descriptions and structural groupings.
+This section provides a complete, module‑ordered catalog of all **BigSpill** functions, along with short descriptions and structural groupings.
 
 ---
 ### Gridwork
@@ -597,7 +597,7 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 ---
 ## 5. Usage Patterns
 
-Included are several examples illustrating the possibilities available with BigSpill.
+Included are several examples illustrating the possibilities available with **BigSpill**.
 
 #### 5.1 Split and Sort
 
@@ -836,7 +836,7 @@ Output:
 
 #### 6.1 Clean-up and Re-Map
 
-Pinchλ removes blank rows and columns. BlockMapλ re-tiles by specifying block size in depth x width.
+`Pinchλ` removes blank rows and columns. `BlockMapλ` re-tiles by specifying block size in depth x width.
 
 `Data`=
 ```Text
@@ -921,7 +921,7 @@ Output:
 ```
 #### 6.3 Create an Auto-Number and Switch Existing Columns
 
-This example shows how to generate auto‑numbered company codes and restructure an existing dataset using Streakλ, Removeλ, and Embedλ.
+This example shows how to generate auto‑numbered company codes and restructure an existing dataset using `Streakλ`, `Removeλ`, and `Embedλ`.
 
 `Products`=
 ```Text
@@ -1011,14 +1011,11 @@ Output:
 
 ---
 ## 7. Performance Notes
-All BigSpill functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill engine and array‑native calculation engine, minimizing formula inputs and improving recalculation speed.
+All **BigSpill** functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill engine and array‑native calculation engine, minimizing formula inputs and improving recalculation speed.
 
 #### Early Termination via Dual LET Blocks
-Many BigSpill functions use a two‑stage LET structure.
-The first LET block performs lightweight validation and checks for simple cases.
-If a function can terminate early, for example, because parameters are invalid or a trivial result is available - it returns immediately.
-
-Only when necessary does the function proceed into the second LET block. This method reduces unnecessary computation and improves responsiveness in large workbooks.
+Many BigSpill functions use a two‑stage `LET` structure.
+The first `LET` block performs lightweight validation and checks for simple cases.  This allows a function to terminate early for an error or if a simpler, trivial calculation will suffice before proceeding into the second `LET` block.
 
 #### Deferred Evaluation (“Thunks”)
 Several functions use deferred evaluation to avoid Excel’s eager calculation of intermediate indices.
