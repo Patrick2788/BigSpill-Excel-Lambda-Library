@@ -1020,7 +1020,9 @@ The first `LET` block performs lightweight validation and checks for simple case
 #### Deferred Evaluation (“Thunks”)
 Several functions use deferred evaluation to avoid Excel’s eager calculation of intermediate indices.
 By wrapping index expressions in lightweight lambdas, BigSpill prevents Excel from computing values until they are actually needed.
-This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct indexing instead.
+This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct evaluation instead.
+
+For an example where deferred evaluation is advantageous, please see `Spiralλ` at: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
 
 #### Reuse of Lower‑Level Operators
 As shown in the dependency hierarchies in **Section 3: Function Reference**, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`, for example.
