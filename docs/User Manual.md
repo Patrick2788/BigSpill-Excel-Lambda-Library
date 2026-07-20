@@ -1026,7 +1026,7 @@ By wrapping index expressions in lightweight lambdas, BigSpill prevents Excel fr
 This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct indexing instead.
 
 #### Reuse of Lower‑Level Operators
-As shown in the dependency hierarchies in Section 3: Function Reference, most BigSpill functions are composed from smaller, efficient primitives such as Resizeλ, Snapλ, Removeλ, and Pairwiseλ.
+As shown in the dependency hierarchies in Section 3: Function Reference, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`, for example.
 This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
 
 
