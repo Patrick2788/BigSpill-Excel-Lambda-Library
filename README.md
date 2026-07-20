@@ -1,6 +1,9 @@
 <p align="left">
-  <img src="assets/BigSpillLogo.png" alt="BigSpill Logo" width="320">
+  <a href="https://github.com/Patrick2788/BigSpill-Excel-Lambda-Library">
+    <img src="assets/BigSpillLogo.png" alt="BigSpill Logo" width="320">
+  </a>
 </p>
+
 
 <p align="left"><em>It began with a Big Grid…</em></p>
 
