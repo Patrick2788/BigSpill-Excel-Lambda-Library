@@ -1011,7 +1011,24 @@ Output:
 
 ---
 ## 7. Performance Notes
-content
+All BigSpill functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill engine and array‑native calculation engine, minimizing formula inputs and improving recalculation speed.
+
+#### Early Termination via Dual LET Blocks
+Many BigSpill functions use a two‑stage LET structure.
+The first LET block performs lightweight validation and checks for simple cases.
+If a function can terminate early, for example, because parameters are invalid or a trivial result is available - it returns immediately.
+
+Only when necessary does the function proceed into the second LET block. This method reduces unnecessary computation and improves responsiveness in large workbooks.
+
+#### Deferred Evaluation (“Thunks”)
+Several functions use deferred evaluation to avoid Excel’s eager calculation of intermediate indices.
+By wrapping index expressions in lightweight lambdas, BigSpill prevents Excel from computing values until they are actually needed.
+This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct indexing instead.
+
+#### Reuse of Lower‑Level Operators
+As shown in the dependency hierarchies in Section 3: Function Reference, most BigSpill functions are composed from smaller, efficient primitives such as Resizeλ, Snapλ, Removeλ, and Pairwiseλ.
+This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
+
 
 ---
 ## 8. Versioning Notes
