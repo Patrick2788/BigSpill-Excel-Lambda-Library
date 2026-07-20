@@ -26,7 +26,7 @@ BigSpill consists of 90 functions across 10 modules:
 
 ## **Compatability**
 
-BigSpill requires the modern Excel calculation engine with full support for LAMBDA, dynamic arrays, and Element‑to‑Apply (ETA) evaluation used by functions such as `BYROW`, `BYCOL`, `GROUPBY`, and other `LAMBDA` helpers.
+**BigSpill** requires the modern Excel calculation engine with full support for `LAMBDA`, dynamic arrays, and Element‑to‑Apply (ETA) evaluation used by functions such as `BYROW`, `BYCOL`, and `GROUPBY`.
 
 | Platform | Support |
 |---------|-------------|
