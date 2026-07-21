@@ -819,7 +819,7 @@ The `+` is used to coerce the result of `Diamondλ`into an array before being ev
 
 `Grainλ` operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom `LAMBDA`.
 
-Matrix=
+`Matrix` =
 ```Text
 {345,459,931,924,206,711;
  997,357,425,778,844,839;
