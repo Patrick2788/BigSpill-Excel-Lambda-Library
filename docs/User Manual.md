@@ -48,12 +48,13 @@ Steps:
 4. Choose the destination workbook.
 5. Check Create a copy → OK.
 6. To verify the transfer, enter: `=Shiftλ(123,1)`. If `{2;3;1}` spills, BigSpill is installed.
+7. You may delete the sheet you copied to the existing workbook.
 
 Note:
 - Always copy from the BigSpill workbook into the workbook that will receive BigSpill (Once you've verified installation, the blank sheet can be deleted from your workbook).
 - All BigSpill functions include a `λ` suffix, which prevents name conflicts when the above steps are performed.
 
-### 2.4 Requesting a Gist import URL (Advanced)
+### 2.4 Requesting a Gist import URL
 BigSpill can also be installed using the Advanced Formula Environment (AFE) by importing a private Gist that contains the full module. This installation method is intended for developers.
 
 The Gist URL is not included in this manual. Access may be granted upon request.
