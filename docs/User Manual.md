@@ -870,7 +870,6 @@ Output:
  "Peg Bailey",     "", "Randolph Wilkens", "", "Jose Alvarado";
  "Data Analyst",   "", "Legal Advisor",    "", "CEO";
  "pbailey@example.com","", "rwilkens@example.com","", "Jose@example.com"}
-
 ```
 
 Formula:
@@ -941,12 +940,12 @@ The workaround is to extract only the numbers from the data set and then obtain 
 
 Output:
 ```
-{"Start","End","Total";
-"<",0,0;
-0,25,17;
-25,50,8;
-50,75,11;
-75,100,14}
+{"Start", "End",  "Total";
+ "<",     "0",    0;
+ "0",     "25",   17;
+ "25",    "50",   8;
+ "50",    "75",   11;
+ "75",    "100",  14}
 ```
 ┈┈┈┈┈┈┈┈┈┈┈
 
@@ -1040,7 +1039,7 @@ Output:
 "Fighter","Red Mage","White Mage","Black Mage";
 "Black Belt","Red Mage","White Mage","Black Mage"}
 ```
-┈┈┈┈┈┈┈┈┈┈┈
+
 
 ---
 ## 7. Performance Notes
