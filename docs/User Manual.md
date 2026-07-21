@@ -484,7 +484,7 @@ Coalesceλ
 | **TextOnlyλ** | Extracts non‑numeric characters |
 | **Splitλ** | Splits text arrays into tokens and can return a 2D spill |
 
-**Note:** `NumbersOnlyλ` is strict - it extracts only characters whose CODE() is numeric. Mixed values such as "30.25A" become "3025" because non‑numeric characters (like "." or "A") are removed rather than interpreted.
+**Note:** `NumbersOnlyλ` is strict - it extracts only characters whose `CODE()` is numeric. Mixed values such as "30.25A" become "3025" because non‑numeric characters (like "." or "A") are removed rather than interpreted.
 
 ---
 
@@ -549,7 +549,7 @@ Dec2Binλ
 ---
 
 ### Diagnostics
-Functions whose purpose is to expose, annotate, or explain the internal structure of a grid. Diagnostics functions are used for debugging, introspection, visualization, and structural analysis.
+Functions whose purpose is to expose, annotate, or explain the internal structure of a grid. Diagnostics functions are used for debugging, visualization, and structural analysis.
 
 | Function | Description |
 | --- | --- |
