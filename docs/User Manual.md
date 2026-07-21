@@ -790,6 +790,7 @@ Output:
 ```
 
 `{1,2,3,4,5}` may also be supplied to yield the same results.
+
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.6 Diamond Sum
 
