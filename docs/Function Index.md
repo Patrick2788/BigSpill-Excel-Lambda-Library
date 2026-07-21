@@ -22,7 +22,7 @@
 
 ## 03 - [SA]  2D Array Shaping
 
-            **Core Shaping Primitives**
+            Core Shaping Primitives
             [SA01]	ReShape2Dλ
             [SA02]	ReSizeλ
             [SA03]	Scan2Dλ
@@ -30,7 +30,7 @@
             [SA05]	TakeBlockλ
             [SA06]	DStackλ
 
-            **Reflow**
+            Reflow
             [SA07]	WrapRows2Dλ
             [SA08]	WrapCols2Dλ
             [SA09]	Staircaseλ
@@ -38,17 +38,17 @@
             [SA11]	Zipλ
             [SA13]	SliceByDegλ
 
-            **Padding**
+            Padding
             [SA14]	Padλ
             [SA15]	InsulateRowsλ
             [SA16]	InsulateColsλ
 
-            **Interpolation**
+            Interpolation
             [SA17]	Magnifyλ
             [SA18]	Zoomλ
 
 ## 04 - [GA]  Grid Algebra
-            **Deletion**
+            Deletion
             [GA01]	DeleteRowsλ
             [GA02]	DeleteColsλ
             [GA03]	DeleteWhereλ
@@ -56,24 +56,24 @@
             [GA05]	Removeλ
             [GA06]	Squeezeλ
 
-            **Expansion**
+            Expansion
             [GA07]	KroneckerProdλ
 
-            **Filtering**
+            Filtering
             [GA08]	Excludeλ
             [GA09]	Snapλ
 
-            **Rolling**
+            Rolling
             [GA10]	Shiftλ
             [GA11]	ShiftRowsλ
             [GA12]	ShiftColsλ
 
-            **Selection**
+            Selection
             [GA13]	Embedλ
             [GA14]	KeepRowsλ
             [GA15]	KeepColsλ
 
-            **Structural Mapping**
+            Structural Mapping
             [GA16]	BlockMapλ
             [GA17]	Convolveλ
             [GA18]	Foldλ
@@ -86,11 +86,11 @@
             [RP04]	Tessellateλ
 
 ## 06 - [GR]  Grid Analytics
-           ** Sequencing**
+            Sequencing
             [GR01]	Streakλ
             [GR02]	Countdownλ
 
-            **Categorical Analysis**
+            Categorical Analysis
             [GR03]	ByDiagλ
             [GR04]	DiagMapλ
             [GR05]	DiagIndexλ
@@ -99,12 +99,12 @@
             [GR08]	GroupbyDateλ
             [GR09]	PivotbyCatλ
 
-            **Neighborhoods**
+            Neighborhoods
             [GR10]	Grainλ
             [GR11]	MooreAggλ
             [GR12]	MooreSelectλ
 
-            **Statistics**
+            Statistics
             [GR13]	Histogramλ
             [GR14]	Modeλ
             [GR15]	ZoneStatλ
