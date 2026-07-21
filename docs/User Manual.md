@@ -691,8 +691,8 @@ Formula:
 
 Output:
 ```Text
-{"black","navy","white",	1;
- "blue","green",  "red",		3;
+{"black", "navy",  "white",	1;
+ "blue",  "green", "red",	3;
  "yellow","yellow","yellow",2}
 ```
 ┈┈┈┈┈┈┈┈┈┈┈
