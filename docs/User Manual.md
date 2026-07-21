@@ -813,6 +813,7 @@ Output:
 `65`
 
 The `+` is used to coerce the result of `Diamondλ`into an array before being evaluated by `SUM`.
+
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.7 Downsample a matrix
 
