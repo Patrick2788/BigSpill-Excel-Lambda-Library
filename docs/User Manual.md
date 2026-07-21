@@ -858,9 +858,9 @@ Output:
 
 #### 6.1 Clean-up and Re-Map
 
-`Pinchλ` removes blank rows and columns. `BlockMapλ` re-tiles by specifying block size in depth x width.
+`Pinchλ` removes blank rows and columns. `BlockMapλ` re-tiles by specifying block size in `depth` x `width`.
 
-`Data`=
+`Data` =
 ```Text
 {"Jon Doe",        "", "Deb Smith",        "", "Ned Johnson";
  "Senior VP",      "", "HR manager",       "", "Data Analyst";
@@ -872,6 +872,7 @@ Output:
  "pbailey@example.com","", "rwilkens@example.com","", "Jose@example.com"}
 
 ```
+
 Formula:
 ```Excel
 =LET(
@@ -879,6 +880,7 @@ Formula:
      remapped, BlockMapλ(cleaned, 3, 1),
      remapped)
 ```
+
 Output:
 ```Text
 {"Jon Doe",        "Senior VP",      "jdoe@example.com";
@@ -887,15 +889,16 @@ Output:
  "Peg Bailey",     "Data Analyst",   "pbailey@example.com";
  "Randolph Wilkens","Legal Advisor", "rwilkens@example.com";
  "Jose Alvarado",  "CEO",            "Jose@example.com"}
-
 ```
-6.2 Inspect, Extract, and Analyze
+┈┈┈┈┈┈┈┈┈┈┈
+
+#### 6.2 Inspect, Extract, and Analyze
 
 The goal is to obtain a binned analysis of numerical data with `Histogramλ`.
 
 The challenge is the data is not clean and contains various footnote characters.  The original data cannot be altered and must be preserved.
 
-MessyData=
+`MessyData` =
 ```Text
 { 2,   "89₁", 45, 31, 20;
  17,    36,  "9₂",  6, 15;
@@ -907,12 +910,13 @@ MessyData=
 "77₅",  47,   66, 90, "99†";
  75,    66,   89, 12, 35;
  13,    18,  "1‡", 28, 53}
-
 ```
-Revealλ is used to inspect the data.
+
+`Revealλ` is used to inspect the data.
 ```Excel
 =Revealλ(MessyData)
 ```
+
 The result confirms not all data is numerical.
 ```Text
 {"Number",43;
@@ -925,13 +929,16 @@ The result confirms not all data is numerical.
 "Blank",0;
 "Logical",0}
 ```
-The workaround is to extract only the numbers from the data set and then obtain the analysis with `Histogramλ` using a `bin_width` = 25.
+
+The workaround is to extract only the numbers from the data set and then obtain the analysis with `Histogramλ` with `bin_width` = 25.
+
 ```Excel
 =LET(
      numbers, NumbersOnlyλ(MessyData),
      hist, Histogramλ(numbers, 25),
      hist)
 ```
+
 Output:
 ```
 {"Start","End","Total";
@@ -941,11 +948,13 @@ Output:
 50,75,11;
 75,100,14}
 ```
+┈┈┈┈┈┈┈┈┈┈┈
+
 #### 6.3 Create an Auto-Number and Switch Existing Columns
 
 This example shows how to generate auto‑numbered company codes and restructure an existing dataset using `Streakλ`, `Removeλ`, and `Embedλ`.
 
-`Products`=
+`Products` =
 ```Text
 {"Nexora Solutions","NS","Sprocket",12.99;
 "Nexora Solutions","NS","Widget",15.49;
@@ -974,6 +983,7 @@ This example shows how to generate auto‑numbered company codes and restructure
  "QL";
  "QL"}
 ```
+
 This formula creates an `autonum` with `Streakλ`.
 `Removeλ` then pulls the second column from `Products`. 
 `Embedλ` inserts `autonum` into `rev_products` as the second column.
@@ -999,6 +1009,7 @@ Output:
 "QuantumLeap LLC","QL·1","Lever",11.49;
 "QuantumLeap LLC","QL·2","Pulley",13.99}
 ```
+┈┈┈┈┈┈┈┈┈┈┈
 
 #### 6.4 Party of the First Party
 
@@ -1018,7 +1029,8 @@ Formula:
     filtered, Excludeλ(parties, "Thief"),
     filtered)
 ```
-Combinationsλ generates all possible combinations without replacement. Excludeλ is a convenient way to filter out parties which include a Thief.
+
+`Combinationsλ` generates all possible combinations without replacement. `Excludeλ` is a convenient way to filter out parties which include a Thief.
 
 Output:
 ```Text
@@ -1028,8 +1040,7 @@ Output:
 "Fighter","Red Mage","White Mage","Black Mage";
 "Black Belt","Red Mage","White Mage","Black Mage"}
 ```
-
-
+┈┈┈┈┈┈┈┈┈┈┈
 
 ---
 ## 7. Performance Notes
