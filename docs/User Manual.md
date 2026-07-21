@@ -645,7 +645,7 @@ Output:
 
 `Snapλ` is designed to be a quick row-level filter alternative to `FILTER`. The user only needs to specify the include criteria (No booleans required).
 
-Grades =
+`Grades` =
 ````
 {"Bobby","History","B";
  "Deb","Physics","A";
