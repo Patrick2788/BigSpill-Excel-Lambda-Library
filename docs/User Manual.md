@@ -87,7 +87,7 @@ Resizeλ
 ---
 
 ### Grid Geometry
-A family of geometric extraction operators for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
+A family of geometric extraction functions for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
 
 #### Dependency Hierarchy
 ```
@@ -116,6 +116,7 @@ MGridλ
 | **Triangleλ** | Directional triangular region (above or below) |
 
 ---
+
 ### 2D Array Shaping
 Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
@@ -205,6 +206,7 @@ Zipλ
 | **Zoomλ** | Expands each element into a block whose size matches the height × width of `zoom_kernel` |
 
 ---
+
 ### Grid Algebra
 A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
 
@@ -322,6 +324,7 @@ Join2Dλ
 | **Join2Dλ** | Joins non‑empty values across 2–4 identically‑shaped arrays using a delimiter |
 
 ---
+
 ### Repetition
 Functions that replicate arrays along rows, columns, or both.
 
@@ -348,6 +351,7 @@ TGridλ
 | **Tessellateλ** | Generates a modular tessellation of a 2D pattern defined by `new_height `× `new_width` |
 
 ---
+
 ### Grid Analytics
 A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics.
 
@@ -442,6 +446,7 @@ GroupbyBinλ
 | **ZoneStatλ** | Aggregates values by zones determined by `Histogramλ` |
 
 ---
+
 ### Text
 This category provides operators that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
 
@@ -482,6 +487,7 @@ Coalesceλ
 **Note:** `NumbersOnlyλ` is strict - it extracts only characters whose CODE() is numeric. Mixed values such as "30.25A" become "3025" because non‑numeric characters (like "." or "A") are removed rather than interpreted.
 
 ---
+
 ### Engineering
 Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native `DEC2BIN` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
 
@@ -541,6 +547,7 @@ Dec2Binλ
 | **SubsetSumλ** | Returns all subsets whose elements sum to a target |
 
 ---
+
 ### Diagnostics
 Functions whose purpose is to expose, annotate, or explain the internal structure of a grid. Diagnostics functions are used for debugging, introspection, visualization, and structural analysis.
 
