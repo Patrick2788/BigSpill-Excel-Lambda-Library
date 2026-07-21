@@ -35,8 +35,8 @@ Save it to a safe location on your computer and double‑click it to create a ne
 
 ### 2.2 Verifying BigSpill is Installed
 1. Double-click `BigSpill_Template.xltx` to open a new workbook.
-2. In any cell enter: `=Shiftλ(123,1)`.
-3. If the functions spills a 3 x 1 array of: `{2; 3; 1}` then BigSpill is installed. `#NAME?` would indicate the workbook was not created from the BigSpill Template.
+2. In any cell, enter: `=Shiftλ(123,1)`.
+3. If the function spills a 3x1 array of: `{2; 3; 1}` then BigSpill is installed. `#NAME?` would indicate the workbook was not created from the BigSpill Template.
 
 ### 2.3 Adding BigSpill to an Existing Workbook
 If you want to use BigSpill inside an existing `.xlsx`, the easiest method is to copy a sheet from a BigSpill‑enabled workbook. This automatically transfers all BigSpill modules.
