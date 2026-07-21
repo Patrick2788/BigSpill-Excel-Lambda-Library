@@ -21,7 +21,7 @@ This manual provides installation steps, usage patterns, multi-step examples, an
 
 ---
 ## 1. Welcome
-**BigSpill** builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, `LAMBDA`, `LET`) along with the wealth of new functions added in recent years. It exists to bring the power of Excel, where most anything is possible within reason, to the user without the complexity.
+**BigSpill** builds on the innovations Excel introduced between 2018 and 2021 (Dynamic Arrays, `LAMBDA`, `LET`) along with the wealth of new functions added in recent years. It exists to bring Excel’s power, where most anything is possible within reason, to the user without the complexity.
 
 It offers easy-to-use and reliable functions for beginners and intricate building blocks for developers. BigSpill has something for everyone!
 
