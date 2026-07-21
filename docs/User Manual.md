@@ -4,7 +4,7 @@
 
 # User Manual
 **BigSpill** is a library designed to harness the power of modern Excel to make everyday tasks easier and to provide tools for tackling almost any problem.
-By bringing generalization and clarity to grid‑based work, it replaces long, brittle formulas with sustainable, spill‑aware operations.
+It brings clarity and reusability to grid‑based work by replacing long, brittle formulas with sustainable, dynamic array solutions.
 
 This manual provides installation steps, usage patterns, multi-step examples, and a complete reference to every BigSpill function.
 
