@@ -616,7 +616,6 @@ Included are several examples illustrating the possibilities available with **Bi
 `Splitλ` converts a 1D array of strings into a 2D array and then `Alignλ` sorts it row-wise.
 
  `Strings` =
-
 ```text
 {"1, 10, 2, 1, 5, 9, 7, 5, 8, 1";
 "1, 9, 2, 6, 7, 10, 3, 1, 9, 1";
@@ -626,15 +625,14 @@ Included are several examples illustrating the possibilities available with **Bi
 ```
 
 Formula:
-
 ```excel
 =LET(
     arr, --Splitλ(Strings, ", "),
     sorted, Alignλ(arr),
     sorted)
 ```
-Output:
 
+Output:
 ```text
 ={"1","1","1","2","5","5","7","8","9","10";
 "1","1","1","2","3","6","7","9","9","10";
@@ -645,9 +643,9 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.2 Easy Filtering
 
-Snapλ is designed to be a quick row-level filter alternative to FILTER. The user only needs to specify the include criteria (No booleans required).
+`Snapλ` is designed to be a quick row-level filter alternative to `FILTER`. The user only needs to specify the include criteria (No booleans required).
 
-Grades=
+Grades =
 ````
 {"Bobby","History","B";
  "Deb","Physics","A";
@@ -658,10 +656,12 @@ Grades=
 "Jose","Math","A";
 "Bobby","English","B"}
 ````
+
 Formula:
 ```Excel
 =Snapλ(Grades,"A")
 ```
+
 Output:
 ```Text
 {"Deb","Physics","A";
@@ -672,9 +672,9 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.3 Split and Fold
 
-Splitλ converts the 1D array to a 2D array of colors. Foldλ provides an aggregate COUNTA of colors where order of colors does not matter.
+`Splitλ` converts the 1D array to a 2D array of colors. `Foldλ` provides an aggregate `COUNTA` of colors where order of colors does not matter.
 
-Colors=
+Colors =
 ```Text
 {"red,green,blue";
 "blue,green,red";
@@ -683,6 +683,7 @@ Colors=
 "yellow,yellow,yellow";
 "navy,white,black"}
 ```
+
 Formula:
 ```Excel
 =Foldλ(Splitλ(colors,","))
@@ -696,20 +697,24 @@ Output:
 ```
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.4 Cartesian Product
+
 `Pairwiseλ` creates a deck of card cards from rank and suit.
 
 `Rank` =
 ```text
 {"A";"K";"Q";"J";10;9;8;7;6;5;4;3;2}
 ```
+
 `Suit` =
 ```text
 {"♠";"♥";"♦";"♣"}
 ```
+
 Formula:
 ```Excel
 =Pairwiseλ(Rank,Suit)
 ```
+
 Output:
 ```text
 {"A" , "♠";
@@ -764,12 +769,11 @@ Output:
  2   , "♥";
  2   , "♦";
  2   , "♣"}
-
 ```
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.5 Circular Shift
 
-Shiftλ rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
+`Shiftλ` rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
 
 Formula:
 ```Excel
@@ -789,7 +793,7 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.6 Diamond Sum
 
-`Diamondλ` extracts the shape from the grid and SUM obtains the total.
+`Diamondλ` extracts the shape from the grid and `SUM` obtains the total.
 
 `Grid` =
 ```text
@@ -811,7 +815,7 @@ The `+` is used to coerce the result of `Diamondλ`into an array before being ev
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.7 Downsample a matrix
 
-Grainλ operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom LAMBDA.
+`Grainλ` operates on blocks (specified by `depth` and `width`) and aggregates using an ETA function or custom `LAMBDA`.
 
 Matrix=
 ```Text
@@ -822,20 +826,24 @@ Matrix=
  137,290,266,423,546,651;
  903,455,234,357,257,870}
 ````
+
 Formula:
 ```Excel
 =Grainλ(Matrix,2,3,MAX)
 ```
+
 Output:
 ```Text
 {997,924;
  927,843;
  903,870}
 ```
+
 Formula:
 ```Excel
 =Grainλ(Matrix,2,3,LAMBDA(v,MAX(v)-MIN(v)))
 ```
+
 Output:
 ```Text
 {652,718;
