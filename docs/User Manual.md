@@ -49,7 +49,7 @@ Steps:
 4. Choose the destination workbook.
 5. Check Create a copy → OK.
 6. To verify the transfer, enter: `=Shiftλ(123,1)`. If `{2;3;1}` spills, BigSpill is installed.
-7. You may delete the sheet you copied to the existing workbook.
+7. After verification, you may delete the copied sheet.
 
 Note:
 - Always copy from the BigSpill workbook into the workbook that will receive BigSpill (Once you've verified installation, the blank sheet can be deleted from your workbook).
