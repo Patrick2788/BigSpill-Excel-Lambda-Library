@@ -1047,14 +1047,14 @@ All **BigSpill** functions were developed and tested using Excel 365 for PC, 64�
 
 #### Early Termination via Dual LET Blocks
 Many BigSpill functions use a two‑stage `LET` structure.
-The first `LET` block performs lightweight validation and checks for simple cases. This allows a function to terminate early and quickly for an error.  Additionally, for some functions it will perform a simpler, trivial calculation if the situation warrants it. For example, `Convolveλ` will route to a simpler `MAP` if the `kernel` provided is a scalar.  Functions will only proceed to the second `LET` block when necessary.
+The first `LET` block performs lightweight validation and checks for simple cases. This allows a function to terminate early and quickly when an error is detected.  Additionally, some functions perform a simpler, trivial calculation when the situation warrants it. For example, `Convolveλ` will route to a simpler `MAP` when the supplied `kernel` is a scalar.  Functions will only proceed to the second `LET` block when necessary.
 
 #### Deferred Evaluation (“Thunks”)
 Several functions use deferred evaluation to avoid Excel’s eager calculation of intermediate indices.
 By wrapping index expressions in `LAMBDA`, BigSpill prevents Excel from computing values until they are actually needed.
 This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct evaluation instead.
 
-For an example where deferred evaluation is advantageous, please see `Spiralλ` at: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
+For an example where deferred evaluation is advantageous, please see `Spiralλ`: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
 
 #### Reuse of Lower‑Level Operators
 As shown in the dependency hierarchies in **Section 3: Function Reference**, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`, for example. This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
