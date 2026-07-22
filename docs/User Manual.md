@@ -614,7 +614,7 @@ Included are several examples illustrating the possibilities available with **Bi
 
 #### 5.1 Split and Sort
 
-`Splitλ` converts a 1D array of strings into a 2D array and then `Alignλ` sorts it row-wise.
+`Splitλ` converts a 1D array of strings into a 2D array. `Alignλ` then sorts each row alphabetically.
 
  `Strings` =
 ```text
@@ -644,7 +644,7 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.2 Easy Filtering
 
-`Snapλ` is designed to be a quick row-level filter alternative to `FILTER`. The user only needs to specify the include criteria (No booleans required).
+`Snapλ` provides a quick row-level filter alternative to `FILTER`. Only the include‑criteria value is required.
 
 `Grades` =
 ````
@@ -673,7 +673,7 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.3 Split and Fold
 
-`Splitλ` converts the 1D array to a 2D array of colors. `Foldλ` provides an aggregate `COUNTA` of colors where order of colors does not matter.
+`Splitλ` converts each row into a 2D array of colors. `Foldλ` aggregates indentical rows with `COUNTA`.
 
 Colors =
 ```Text
@@ -774,7 +774,7 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.5 Circular Shift
 
-`Shiftλ` rotates a tuple by a given number of positions. Supplying a vector of shifts produces all rotations.
+`Shiftλ` rotates a tuple by a specified number of positions. Supplying a vector of shifts produces all rotations.
 
 Formula:
 ```Excel
@@ -790,12 +790,12 @@ Output:
  "1","2","3","4","5"}
 ```
 
-`{1,2,3,4,5}` may also be supplied to yield the same results.
+`{1,2,3,4,5}` may also be supplied to produce the same results.
 
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.6 Diamond Sum
 
-`Diamondλ` extracts the shape from the grid and `SUM` obtains the total.
+`Diamondλ` extracts a diamond-shaped region from the grid. `SUM` then aggregates the values.
 
 `Grid` =
 ```text
@@ -813,7 +813,7 @@ Formula:
 Output:
 `65`
 
-The `+` is used to coerce the result of `Diamondλ`into an array before being evaluated by `SUM`.
+The unary `+` is used to coerce the result of `Diamondλ`into an array before evaluation by `SUM`.
 
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.7 Downsample a matrix
