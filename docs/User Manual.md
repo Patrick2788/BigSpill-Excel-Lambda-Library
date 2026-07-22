@@ -62,7 +62,7 @@ The Gist URL is not included in this manual. Access may be granted upon request.
 
 ---
 ## 3. Function Reference
-This section provides a complete, module‑ordered catalog of all **BigSpill** functions, along with short descriptions and structural groupings.
+This section provides a complete, module‑ordered catalog of all **BigSpill** functions, along with short descriptions and structural groupings. Dependency hierarchies are shown for each category where applicable.
 
 ---
 ### Gridwork
@@ -177,7 +177,7 @@ Zipλ
 | **ReSizeλ** | Repeats a 2D array vertically and/or horizontally by integer repeat counts |
 | **Scan2Dλ** | Traversal‑aware 2D scanning operator extending Excel’s native `SCAN` |
 | **Traverseλ** | Remaps a 2D array into a new traversal order using diagonal directions |
-| **TakeBlockλ** | Extracts a rectangular block using start_at and optional stop_when |
+| **TakeBlockλ** | Extracts a rectangular block using `start_at` and optional `stop_when` |
 | **DStackλ** | Stacks multiple 2D arrays along a depth dimension |
 
 #### Reflow
@@ -189,7 +189,7 @@ Zipλ
 | **Staircaseλ** | Constructs diagonal staircase patterns |
 | **UnPivotλ** | Converts a matrix into a flattened row‑wise table |
 | **Zipλ** | Zips 1–4 arrays by flattening and aligning by length |
-| **SliceByDegλ** | Extracts angular slices using degree bounds (0°–360°) |
+| **SliceByDegλ** | Extracts angular slices using degree bounds (0°-360°) |
 		
 #### Padding
 
@@ -203,13 +203,13 @@ Zipλ
 
 | Function | Description |
 | --- | --- |
-| **Magnifyλ** | Expands each element into a block of specified height × width using nearest‑neighbor interpolation |
+| **Magnifyλ** | Expands each element into a block of specified `height` × `width` using nearest‑neighbor interpolation |
 | **Zoomλ** | Expands each element into a block whose size matches the height × width of `zoom_kernel` |
 
 ---
 
 ### Grid Algebra
-A toolkit for structural editing of 2D arrays. These operators support deletion, selection, filtering, rolling, expansion, and structural mapping.
+A toolkit for structural editing of 2D arrays. These functions support deletion, selection, filtering, rolling, expansion, and structural mapping.
 
 #### Dependency Hierarchy
 ```
@@ -319,8 +319,8 @@ Join2Dλ
 
 | Function | Description |
 | --- | --- |
-| **BlockMapλ** | Reshapes a matrix row‑wise or column‑wise into blocks of size depth × width |
-| **Convolveλ** | Performs sliding‑window convolution using a 2D kernel |
+| **BlockMapλ** | Reshapes a matrix row‑wise or column‑wise into blocks of size `depth` × `width` |
+| **Convolveλ** | Performs sliding‑window convolution using a 2D `kernel` |
 | **Foldλ** | Groups identical rows and aggregates values from `values_array` |
 | **Join2Dλ** | Joins non‑empty values across 2–4 identically‑shaped arrays using a delimiter |
 
@@ -422,7 +422,7 @@ GroupbyBinλ
 
 | Function | Description |
 | --- | --- |
-| **ByDiagλ** | Applies an ETA function or Lambda to each diagonal |
+| **ByDiagλ** | Applies an ETA function or `LAMBDA` to each diagonal |
 | **DiagMapλ** | Extracts all diagonals and returns them as a 2D matrix |
 | **DiagIndexλ** | Extracts a single diagonal or anti‑diagonal vector |
 | **Pairwiseλ** | Creates vertical pairs from 1D and scalar inputs |
@@ -449,7 +449,7 @@ GroupbyBinλ
 ---
 
 ### Text
-This category provides operators that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
+This category provides functions that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
 
 #### Dependency Hierarchy
 ```
@@ -543,9 +543,9 @@ Dec2Binλ
 | **CombinationsRλ** | Combinations with replacement |
 | **Combinationsλ** | Combinations without replacement |
 | **Derangementsλ** | Permutations where no element remains in its original position |
-| **KnapSackλ** | Solves subset‑sum / knapsack feasibility |
+| **KnapSackλ** | Solves the 0-1 Knapsack problem |
 | **SubsetGenλ** | Generates all subsets (power set) in binary‑mask order |
-| **SubsetSumλ** | Returns all subsets whose elements sum to a target |
+| **SubsetSumλ** | Returns all subsets whose elements sum to a `target` |
 
 ---
 
