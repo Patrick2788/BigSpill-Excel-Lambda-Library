@@ -583,10 +583,10 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 | #KERNEL! | Kernel contains non‑numeric values or is larger than the input array. |
 | #MATRIX! | Input is not a valid matrix. |
 | #NEIGHBOR! | Invalid neighbor code (must be 1–9). |
-| #NO-ANCHOR! | start_at anchor not found. |
+| #NO-ANCHOR! | `start_at` anchor not found. |
 | #NO-DATES! | No dates found in input. |
 | #NO-REPEATS! | No repeated values found. |
-| #NO-SLICE! | stop_when occurs before start_at. |
+| #NO-SLICE! | `stop_when` occurs before `start_at`. |
 | #NO-SOLUTION! | No subset matches the target. |
 | #NO-TIMES! | No times found in input. |
 | #NOT-ARRAY! | Input is not an array. |
