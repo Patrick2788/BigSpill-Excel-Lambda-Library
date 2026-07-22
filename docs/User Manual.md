@@ -1116,7 +1116,7 @@ They are listed in the recommended learning order:
 ---
 ## 10. Closing Notes
 
-
+**BigSpill** is the result of nearly two decades of study, including over one thousand hours of Lambda research and development work. The goal has always been to make complex calculations easy, elegant, and sustainable. BigSpill is a living library that will update as Excel adds more functions and innovations.
 
 
 
