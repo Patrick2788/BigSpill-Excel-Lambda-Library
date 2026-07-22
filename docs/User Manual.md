@@ -1028,8 +1028,6 @@ Formula:
     filtered)
 ```
 
-`Combinationsλ` generates all possible combinations without replacement. `Excludeλ` is a convenient way to filter out parties which include a Thief.
-
 Output:
 ```Text
 {"Fighter","Black Belt","Red Mage","White Mage";
