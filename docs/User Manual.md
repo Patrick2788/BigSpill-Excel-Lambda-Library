@@ -859,7 +859,7 @@ Output:
 
 #### 6.1 Clean-up and Re-Map
 
-`Pinchλ` removes blank rows and columns. `BlockMapλ` re-tiles by specifying block size in `depth` x `width`.
+`Pinchλ` removes blank rows and columns. `BlockMapλ` then re-tiles the cleaned data using blocks defined by `depth` x `width`.
 
 `Data` =
 ```Text
@@ -896,7 +896,7 @@ Output:
 
 The goal is to obtain a binned analysis of numerical data with `Histogramλ`.
 
-The challenge is the data is not clean and contains various footnote characters. The original data cannot be altered and must be preserved.
+The dataset contains footnote characters and cannot be altered directly.
 
 `MessyData` =
 ```Text
@@ -912,12 +912,12 @@ The challenge is the data is not clean and contains various footnote characters.
  13,    18,  "1‡", 28, 53}
 ```
 
-`Revealλ` is used to inspect the data.
+`Revealλ` confirms the dataset contains non-numeric text.
 ```Excel
 =Revealλ(MessyData)
 ```
 
-The result confirms not all data is numerical.
+Output:
 ```Text
 {"Number",43;
 "Text",7;
@@ -930,7 +930,7 @@ The result confirms not all data is numerical.
 "Logical",0}
 ```
 
-The workaround is to extract only the numbers from the data set and then obtain the analysis with `Histogramλ` with `bin_width` = 25.
+To obtain a clean numeric analysis, extract only the numbers using `NumbersOnlyλ`, then compute the histogram with a bin width of 25.
 
 ```Excel
 =LET(
@@ -952,7 +952,7 @@ Output:
 
 #### 6.3 Create an Auto-Number and Switch Existing Columns
 
-This example shows how to generate auto‑numbered company codes and restructure an existing dataset using `Streakλ`, `Removeλ`, and `Embedλ`.
+This example generates auto‑numbered company codes using `Streakλ` and restructures an existing dataset using `Removeλ` and `Embedλ`.
 
 `Products` =
 ```Text
@@ -984,9 +984,7 @@ This example shows how to generate auto‑numbered company codes and restructure
  "QL"}
 ```
 
-This formula creates an `autonum` with `Streakλ`.
-`Removeλ` then pulls the second column from `Products`. 
-`Embedλ` inserts `autonum` into `rev_products` as the second column.
+Formula:
 ```Excel
 =LET(
      autonum, Streakλ(CompanyCode, , TRUE),
@@ -1013,9 +1011,9 @@ Output:
 
 #### 6.4 Party of the First Party
 
-In the classic role playing game Final Fantasy, there are six classes to choose from to fill out a party of four at the start of the game.
+In the classic role-playing game Final Fantasy, there are six classes available to form a party of four at the start of the game.
 
-List all possible parties without repetition that do not include a Thief.
+The goal is to list all possible parties without repetition that do not include a Thief
 
 `Classes`=
 ```Text
