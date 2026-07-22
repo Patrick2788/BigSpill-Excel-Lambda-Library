@@ -18,6 +18,7 @@ This manual provides installation steps, usage patterns, multi-step examples, an
 7. Performance Notes
 8. Versioning Notes
 9. Appendix
+10. Closing Notes
 
 ---
 ## 1. Welcome
@@ -1098,7 +1099,7 @@ BigSpill is designed for the modern Excel 365. Versions not listed above are not
 
 ### Onboarding Workbooks
 
-The following workbooks provide demonstrations of all functions in BigSpill. All workbooks include the entire BigSpill module.
+The following workbooks provide demonstrations of all functions in **BigSpill**. All workbooks include the entire BigSpill module.
 They are listed in the recommended learning order:
 
 - [00 – BigSpill – Starters](<onboarding/00 - BigSpill - Starters.xlsx>)
@@ -1111,6 +1112,9 @@ They are listed in the recommended learning order:
 - [07 – BigSpill – Engineering](<onboarding/07 - BigSpill - Engineering.xlsx>)
 - [08 – BigSpill – Combinatorics](<onboarding/08 - BigSpill - Combinatorics.xlsx>)
 - [09 – BigSpill – Diagnostics](<onboarding/09 - BigSpill - Diagnostics.xlsx>)
+
+---
+## 10. Closing Notes
 
 
 
