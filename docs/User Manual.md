@@ -6,7 +6,7 @@
 **BigSpill** is a library designed to harness the power of modern Excel to make everyday tasks easier and to provide tools for tackling almost any problem.
 It brings clarity and reusability to grid‑based work by replacing long, brittle formulas with sustainable, dynamic array solutions.
 
-This manual provides installation steps, usage patterns, multi-step examples, and a complete reference to every BigSpill function.
+The library provides reliable, easy‑to‑use functions for everyday tasks and structured building blocks for advanced development. BigSpill is designed to support users at all skill levels.
 
 ## Table of Contents
 1. Welcome
