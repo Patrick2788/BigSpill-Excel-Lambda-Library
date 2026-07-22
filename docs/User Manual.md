@@ -1088,7 +1088,7 @@ Excel for the web includes partial LAMBDA functionality, but it has significant 
 - AFE modules may not load or resolve reliably
 
 #### Excel Insider Channels (Beta / Preview) - Use at Your Own Risk
-Due to the frequency of updates which introduce or remove experimental features which may affect the calculation engine, full support cannot be guaranteed.
+Excel Insider builds receive frequent updates that introduce or remove experimental features. These changes may affect the calculation engine, spill behavior, or `LAMBDA` evaluation. Full compatibility with BigSpill cannot be guaranteed.
 
 #### Other Versions and Applications - Not Supported
 BigSpill is designed for the modern Excel 365. Versions not listed above are not compatible. BigSpill is not intended for use with other spreadsheet applications, and there are no plans to support them.
