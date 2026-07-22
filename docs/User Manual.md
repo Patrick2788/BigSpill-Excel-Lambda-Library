@@ -895,7 +895,7 @@ Output:
 
 The goal is to obtain a binned analysis of numerical data with `Histogramλ`.
 
-The challenge is the data is not clean and contains various footnote characters.  The original data cannot be altered and must be preserved.
+The challenge is the data is not clean and contains various footnote characters. The original data cannot be altered and must be preserved.
 
 `MessyData` =
 ```Text
@@ -1043,15 +1043,15 @@ Output:
 
 ---
 ## 7. Performance Notes
-All **BigSpill** functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill and array‑native calculation engine, minimizing formula inputs and optimizing calculation speed.
+All **BigSpill** functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill and array‑native calculation engine, minimizing formula inputs and optimizing recalculation speed.
 
 #### Early Termination via Dual LET Blocks
 Many BigSpill functions use a two‑stage `LET` structure.
-The first `LET` block performs lightweight validation and checks for simple cases.  This allows a function to terminate early for an error or if a simpler, trivial calculation will suffice before proceeding into the second `LET` block.
+The first `LET` block performs lightweight validation and checks for simple cases. This allows a function to terminate early and quickly for an error.  Additionally, for some functions it will perform a simpler, trivial calculation if the situation warrants it. For example, `Convolveλ` will route to a simpler `MAP` if the `kernel` provided is a scalar.  Functions will only proceed to the second `LET` block when necessary.
 
 #### Deferred Evaluation (“Thunks”)
 Several functions use deferred evaluation to avoid Excel’s eager calculation of intermediate indices.
-By wrapping index expressions in lightweight lambdas, BigSpill prevents Excel from computing values until they are actually needed.
+By wrapping index expressions in `LAMBDA`, BigSpill prevents Excel from computing values until they are actually needed.
 This technique is applied only where it measurably improves performance. Functions that showed no benefit from deferred evaluation use direct evaluation instead.
 
 For an example where deferred evaluation is advantageous, please see `Spiralλ` at: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
@@ -1077,7 +1077,7 @@ Excel 365 receives ongoing feature updates, including new dynamic array function
 Excel 2024 includes all Lambda and dynamic array features available at the time of its release, and BigSpill is fully compatible with those features.
 
 Note:
-- Excel 2024 does not receive new functions after release.  
+- Excel 2024 does not receive new functions after release.
 - Future BigSpill versions may require features available only in Excel 365.
 
 #### Excel for the Web - (Not Supported) 
