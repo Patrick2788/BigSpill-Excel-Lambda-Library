@@ -1043,7 +1043,7 @@ Output:
 
 ---
 ## 7. Performance Notes
-All **BigSpill** functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill engine and array‑native calculation engine, minimizing formula inputs and improving recalculation speed.
+All **BigSpill** functions were developed and tested using Excel 365 for PC, 64‑bit. The functions are designed to leverage Excel’s spill and array‑native calculation engine, minimizing formula inputs and optimizing calculation speed.
 
 #### Early Termination via Dual LET Blocks
 Many BigSpill functions use a two‑stage `LET` structure.
@@ -1057,8 +1057,7 @@ This technique is applied only where it measurably improves performance. Functio
 For an example where deferred evaluation is advantageous, please see `Spiralλ` at: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
 
 #### Reuse of Lower‑Level Operators
-As shown in the dependency hierarchies in **Section 3: Function Reference**, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`, for example.
-This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
+As shown in the dependency hierarchies in **Section 3: Function Reference**, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`, for example. This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
 
 
 ---
