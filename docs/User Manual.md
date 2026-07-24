@@ -188,7 +188,7 @@ Zipλ
 | **WrapCols2Dλ** | Wraps into column blocks of specified width |
 | **Staircaseλ** | Constructs diagonal staircase patterns |
 | **UnPivotλ** | Converts a matrix into a flattened row‑wise table |
-| **Zipλ** | Zips 1–4 arrays by flattening and aligning by length |
+| **Zipλ** | Zips 1-4 arrays by flattening and aligning by length |
 | **SliceByDegλ** | Extracts angular slices using degree bounds (0°-360°) |
 		
 #### Padding
