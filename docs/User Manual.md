@@ -30,7 +30,7 @@ The library provides reliable, easy‑to‑use functions for everyday tasks and 
 ## 2. Installation & Setup
 
 ### 2.1 Install via BigSpill Template (Recommended)
-The [BigSpill Template](../templates/BigSpill_Template.xlsx) is the fastest way to install the full library.
+The [BigSpill Template](../templates/BigSpill_Template.xltx) is the fastest way to install the full library.
 
 Save it to a safe location on your computer and double‑click it to create a new workbook. This new workbook will come preloaded with the entire BigSpill function catalog.
 
