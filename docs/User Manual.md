@@ -582,7 +582,7 @@ BigSpill functions return text‑based error codes when inputs are invalid. Thes
 | #INVALID-ROW! | Row index out of bounds. |
 | #KERNEL! | Kernel contains non‑numeric values or is larger than the input array. |
 | #MATRIX! | Input is not a valid matrix. |
-| #NEIGHBOR! | Invalid neighbor code (must be 1–9). |
+| #NEIGHBOR! | Invalid neighbor code (must be 1-9). |
 | #NO-ANCHOR! | `start_at` anchor not found. |
 | #NO-DATES! | No dates found in input. |
 | #NO-REPEATS! | No repeated values found. |
