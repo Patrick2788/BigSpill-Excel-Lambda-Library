@@ -644,7 +644,7 @@ Output:
 ┈┈┈┈┈┈┈┈┈┈┈
 #### 5.2 Easy Filtering
 
-`Snapλ` provides a quick row-level filter alternative to `FILTER`. Only the include‑criteria value is required.
+`Snapλ` provides a quick row-level filter alternative to `FILTER`. Only the `include`‑criteria value is required.
 
 `Grades` =
 ````
