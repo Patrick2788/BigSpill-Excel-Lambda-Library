@@ -284,7 +284,7 @@ Join2Dλ
 | **DeleteWhereλ** | Removes vertical and horizontal vectors based on a predicate Lambda |
 | **Pinchλ** | Removes rows/columns whose cells all have `LEN(cell) `= `0` |
 | **Removeλ** | Removes specific rows and/or columns |
-| **Squeezeλ** | Removes null and straight‑zero vectors |
+| **Squeezeλ** | Removes null and straight‑zero vectors with optional `custom_criteria` |
 		
 #### Expansion
 
