@@ -436,7 +436,7 @@ GroupbyBinλ
 | Function | Description |
 | --- | --- |
 | **MooreAggλ** | Aggregates over Moore or von Neumann neighborhoods using ETA functions |
-| **MooreSelectλ** | Selects a specific neighbor (1–9) from the Moore neighborhood |
+| **MooreSelectλ** | Selects a specific neighbor (1-9) from the Moore neighborhood |
 		
 #### Statistics
 
