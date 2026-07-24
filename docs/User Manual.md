@@ -322,7 +322,7 @@ Join2Dλ
 | **BlockMapλ** | Reshapes a matrix row‑wise or column‑wise into blocks of size `depth` × `width` |
 | **Convolveλ** | Performs sliding‑window convolution using a 2D `kernel` |
 | **Foldλ** | Groups identical rows and aggregates values from `values_array` |
-| **Join2Dλ** | Joins non‑empty values across 2–4 identically‑shaped arrays using a `delimiter` |
+| **Join2Dλ** | Joins non‑empty values across 2-4 identically‑shaped arrays using a `delimiter` |
 
 ---
 
