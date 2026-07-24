@@ -675,7 +675,7 @@ Output:
 
 `Splitλ` converts each row into a 2D array of colors. `Foldλ` aggregates indentical rows with `COUNTA`.
 
-Colors =
+`Colors` =
 ```Text
 {"red,green,blue";
 "blue,green,red";
