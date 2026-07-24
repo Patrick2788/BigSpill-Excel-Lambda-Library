@@ -297,7 +297,7 @@ Join2Dλ
 | Function | Description |
 | --- | --- |
 | **Excludeλ** | Filters an array by excluding any row containing a specified criterion |
-| **Snapλ** | Selects rows containing at least one value from the include‑criteria |
+| **Snapλ** | Selects rows containing at least one value from the `include`‑criteria |
 		
 #### Rolling
 
