@@ -1013,7 +1013,7 @@ Output:
 
 In the classic role-playing game Final Fantasy, there are six classes available to form a party of four at the start of the game.
 
-The goal is to list all possible parties without repetition that do not include a Thief
+The goal is to list all possible parties without repetition that do not include a Thief.
 
 `Classes`=
 ```Text
