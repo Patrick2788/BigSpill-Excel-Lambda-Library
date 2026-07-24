@@ -108,7 +108,7 @@ MGridλ
 ```
 | Function | Description |
 |---------|-------------|
-| **Circleλ** | Circular region by target or {row, col} center |
+| **Circleλ** | Circular region by `target` or {row, col} center |
 | **Diamondλ** | Manhattan‑radius diamond |
 | **Plusλ** | Cross‑shaped region (von Neumann neighborhood) |
 | **Pyramidλ** | Directional half‑diamond (four pieces) |
