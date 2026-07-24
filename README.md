@@ -5,7 +5,7 @@
 </p>
 
 
-<p align="left"><em>It began with a Big Grid…</em></p>
+<p align="left"><em>It began with a big grid…</em></p>
 
 ## Introduction
 
