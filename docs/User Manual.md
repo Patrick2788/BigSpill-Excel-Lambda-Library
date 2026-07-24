@@ -429,7 +429,7 @@ GroupbyBinλ
 | **GroupbyBinλ** | Aggregates values into fixed‑width numeric bins |
 | **GroupbyDateλ** | Aggregates values by date/time interval (minute → year) |
 | **PivotbyCatλ** | Pivots data by categories and values |
-| **Grainλ** | Downsamples a matrix by aggregating non‑overlapping spatial blocks |
+| **Grainλ** | Downsamples a `matrix` by aggregating non‑overlapping spatial blocks |
 
 #### Neighborhoods
 
