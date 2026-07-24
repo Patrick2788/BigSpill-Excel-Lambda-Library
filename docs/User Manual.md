@@ -481,7 +481,7 @@ Coalesceλ
 | **AlignUniqueλ** | Sorted unique values |
 | **Coalesceλ** | Returns the first non‑empty value across 2–4 arrays |
 | **Explodeλ** | Converts scalar, 1D, or 2D input into exploded character array |
-| **NumbersOnlyλ** | Extracts numeric characters (0–9) |
+| **NumbersOnlyλ** | Extracts numeric characters (0-9) |
 | **TextOnlyλ** | Extracts non‑numeric characters |
 | **Splitλ** | Splits text arrays into tokens and can return a 2D spill |
 
