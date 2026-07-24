@@ -281,7 +281,7 @@ Join2Dλ
 | --- | --- |
 | **DeleteRowsλ** | Deletes rows from a 2D array based on contiguous subgroup runs |
 | **DeleteColsλ** | Deletes columns from a 2D array based on contiguous subgroup runs |
-| **DeleteWhereλ** | Removes vertical and horizontal vectors based on a predicate Lambda |
+| **DeleteWhereλ** | Removes vertical and horizontal vectors based on a predicate `LAMBDA` |
 | **Pinchλ** | Removes rows/columns whose cells all have `LEN(cell) `= `0` |
 | **Removeλ** | Removes specific rows and/or columns |
 | **Squeezeλ** | Removes null and straight‑zero vectors with optional `custom_criteria` |
