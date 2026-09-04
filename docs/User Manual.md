@@ -385,6 +385,14 @@ Echoλ
 Resizeλ
 └── Pairwiseλ
 
+Triplewiseλ
+└── Pairwiseλ
+
+Quadwiseλ
+├── Triplewiseλ
+├── RepeatRowsλ
+└── Resizeλ
+
 ValidateGDλ
 └── GroupbyDateλ
 
@@ -426,6 +434,8 @@ GroupbyBinλ
 | **DiagMapλ** | Extracts all diagonals and returns them as a 2D matrix |
 | **DiagIndexλ** | Extracts a single diagonal or anti‑diagonal vector |
 | **Pairwiseλ** | Creates vertical pairs from 1D and scalar inputs |
+| **Triplewiseλ** | Generates a Cartesian product from 3 sets |
+| **Quadwiseλ** | Generates a Cartesian product from 4 sets |
 | **GroupbyBinλ** | Aggregates values into fixed‑width numeric bins |
 | **GroupbyDateλ** | Aggregates values by date/time interval (minute → year) |
 | **PivotbyCatλ** | Pivots data by categories and values |
