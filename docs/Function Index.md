@@ -95,8 +95,8 @@
             [GR04]	DiagMapλ
             [GR05]	DiagIndexλ
             [GR06]	Pairwiseλ
-            [GR06a]     Triplewiseλ
-            [GR06b]     Quadwiseλ
+            [GR06a] Triplewiseλ
+            [GR06b] Quadwiseλ
             [GR07]	GroupbyBinλ
             [GR08]	GroupbyDateλ
             [GR09]	PivotbyCatλ
