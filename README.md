@@ -14,7 +14,7 @@
 
 ## Modules
 
-BigSpill consists of 90 functions across 10 modules:
+BigSpill consists of 92 functions across 10 modules:
 | Module	| Description |
 |---------|-------------|
 |  **Gridwork**	|  Foundational coordinate systems for 2D arrays  |
