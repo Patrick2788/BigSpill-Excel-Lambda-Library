@@ -4,6 +4,7 @@
   </a>
 </p>
 
+![Version](https://img.shields.io/badge/BigSpill-v1.1.0-blue)
 
 <p align="left"><em>It began with a big grid…</em></p>
 
