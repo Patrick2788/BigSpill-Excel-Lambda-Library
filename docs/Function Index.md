@@ -89,6 +89,8 @@
             Sequencing
             [GR01]	Streakλ
             [GR02]	Countdownλ
+            [GR16]	Instanceλ
+            [GR17]	Waveλ
 
             Categorical Analysis
             [GR03]	ByDiagλ
@@ -100,6 +102,9 @@
             [GR07]	GroupbyBinλ
             [GR08]	GroupbyDateλ
             [GR09]	PivotbyCatλ
+            [GR18]	GroupIndexλ
+            [GR19]	Occurrenceλ
+            [GR20]	OccurrenceRangeλ
 
             Neighborhoods
             [GR10]	Grainλ
