@@ -4,7 +4,7 @@
   </a>
 </p>
 
-![Version](https://img.shields.io/badge/BigSpill-v1.1.0-blue)
+![Version](https://img.shields.io/badge/BigSpill-v1.2.0-blue)
 
 <p align="left"><em>It began with a big grid…</em></p>
 
@@ -14,7 +14,7 @@
 
 ## Modules
 
-BigSpill consists of 92 functions across 10 modules:
+BigSpill consists of 97 functions across 10 modules:
 | Module	| Description |
 |---------|-------------|
 |  **Gridwork**	|  Foundational coordinate systems for 2D arrays  |
