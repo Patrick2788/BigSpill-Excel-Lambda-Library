@@ -15,3 +15,11 @@
 - Updated BigSpill Template (.xltx)
 - Updated onboarding workbooks
 
+## v1.2.0 – Grid Analytics Expansion
+- Added Instanceλ, Waveλ, GroupIndexλ, Occurrenceλ, and OccurrenceRangeλ
+- Updated Grid Analytics category block
+- Updated Convolveλ to support 1D kernels
+- Updated BigSpill Template (.xltx)
+- Updated onboarding workbooks
+- Updated documentation (README, Function Index, User Manual)
+
