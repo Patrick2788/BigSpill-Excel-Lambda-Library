@@ -62,21 +62,13 @@ The Gist URL is not included in this manual. Access may be granted upon request.
 
 ---
 ## 3. Function Reference
-This section provides a complete, module‑ordered catalog of all **BigSpill** functions, along with short descriptions and structural groupings. Dependency hierarchies are shown for each category where applicable.
+This section provides a complete, module‑ordered catalog of all **BigSpill** functions, along with short descriptions and structural groupings.
 
 ---
 ### Gridwork
 The foundational coordinate systems for 2D arrays. Each function produces a centered, symmetrical geometric description of the grid. 
 
-#### Dependency Hierarchy
-```
-Resizeλ
-├── CGridλ
-│   ├── DGridλ
-│   └── PolarGridλ
-├── MGridλ
-└── TGridλ
-```
+
 | Function | Description |
 |---------|-------------|
 | **DGridλ**   |    Direction grid (0°-360°) using centered Cartesian axes |
@@ -90,22 +82,7 @@ Resizeλ
 ### Grid Geometry
 A family of geometric extraction functions for 2D arrays. Each function returns a region of the grid defined by a specific shape, preserving the geometry of the extracted area.
 
-#### Dependency Hierarchy
-```
-Squeezeλ
-├── Circleλ
-├── Diamondλ
-├── Plusλ
-├── Squareλ
-└── Triangleλ
 
-CGridλ
-└── (shared dependency with Squeezeλ)
-
-MGridλ
-├── Pyramidλ
-└── Ringλ
-```
 | Function | Description |
 |---------|-------------|
 | **Circleλ** | Circular region by `target` or {row, col} center |
@@ -121,54 +98,7 @@ MGridλ
 ### 2D Array Shaping
 Shaping functions reshape, resize, wrap, pad, traverse, or reflow grids while preserving the structure of the underlying data.
 
-#### Dependency Hierarchy
-```
-ReShape2Dλ
-└── Scan2Dλ
 
-Traverseλ
-└── Scan2Dλ
-
-ReSizeλ
-├── TakeBlockλ
-├── UnPivotλ
-└── Zoomλ
-
-MGridλ
-└── TakeBlockλ
-
-Echoλ
-├── WrapRows2Dλ
-└── WrapCols2Dλ
-
-ValidateStaircaseλ
-└── Staircaseλ
-
-RepeatRowsλ
-└── UnPivotλ
-
-InsulateRowsλ
-├── UnPivotλ
-└── Padλ
-
-InsulateColsλ
-└── Padλ
-
-DGridλ
-└── SliceByDegλ
-
-DeleteWhereλ
-└── SliceByDegλ
-
-Padλ
-└── (depends on InsulateRowsλ and InsulateColsλ)
-
-Magnifyλ
-└── (no dependencies)
-
-Zipλ
-└── (no dependencies)
-```
 #### Core Shaping Primitives
 
 | Function | Description |
@@ -211,70 +141,7 @@ Zipλ
 ### Grid Algebra
 A toolkit for structural editing of 2D arrays. These functions support deletion, selection, filtering, rolling, expansion, and structural mapping.
 
-#### Dependency Hierarchy
-```
-Streakλ
-├── DeleteRowsλ
-├── DeleteColsλ
-└── KeepRowsλ
-    └── KeepColsλ
 
-Countdownλ
-├── DeleteRowsλ
-├── DeleteColsλ
-└── KeepRowsλ
-    └── KeepColsλ
-
-DeleteWhereλ
-└── SliceByDegλ
-    └── (depends on DGridλ)
-
-Pinchλ
-└── (no dependencies)
-
-Removeλ
-└── (no dependencies)
-
-Squeezeλ
-└── (no dependencies)
-
-Magnifyλ
-└── KroneckerProdλ
-
-ReSizeλ
-├── KroneckerProdλ
-├── ShiftRowsλ
-├── ShiftColsλ
-└── Convolveλ
-
-Explodeλ
-└── Shiftλ
-    ├── ShiftRowsλ
-    └── ShiftColsλ
-
-MGridλ
-├── ShiftRowsλ
-└── ShiftColsλ
-
-Excludeλ
-└── (no dependencies)
-
-Snapλ
-└── (no dependencies)
-
-Embedλ
-└── (no dependencies)
-
-ValidateBlockMapλ
-└── BlockMapλ
-
-Alignλ
-└── Foldλ
-
-Join2Dλ
-└── (no dependencies)
-
-```
 #### Deletion
 
 | Function | Description |
@@ -329,21 +196,6 @@ Join2Dλ
 ### Repetition
 Functions that replicate arrays along rows, columns, or both.
 
-#### Dependency Hierarchy
-```
-Echoλ
-└── (no dependencies)
-
-RepeatRowsλ
-└── (no dependencies)
-
-RepeatColsλ
-└── (no dependencies)
-
-TGridλ
-└── Tessellateλ
-```
-
 | Function | Description |
 | --- | --- |
 | **Echoλ** | Repeats each element in a 1D array according to repeat counts |
@@ -356,75 +208,13 @@ TGridλ
 ### Grid Analytics
 A collection of functions for elegant sequencing, categorical analysis, neighborhood‑based aggregation, and statistics.
 
-#### Dependency Hierarchy
-```
-Streakλ
-├── DeleteRowsλ
-├── DeleteColsλ
-└── KeepRowsλ
-    └── KeepColsλ
-
-Countdownλ
-├── DeleteRowsλ
-├── DeleteColsλ
-└── KeepRowsλ
-    └── KeepColsλ
-
-ValidateDiagλ
-├── ByDiagλ
-├── DiagMapλ
-└── DiagIndexλ
-
-ByDiagλ
-├── DiagMapλ
-└── DiagIndexλ
-
-Echoλ
-└── Pairwiseλ
-
-Resizeλ
-└── Pairwiseλ
-
-Triplewiseλ
-└── Pairwiseλ
-
-Quadwiseλ
-├── Triplewiseλ
-├── RepeatRowsλ
-└── Resizeλ
-
-ValidateGDλ
-└── GroupbyDateλ
-
-RepeatRowsλ
-└── PivotbyCatλ
-
-Streakλ
-└── PivotbyCatλ
-
-Histogramλ
-└── ZoneStatλ
-
-Grainλ
-└── (no dependencies)
-
-MooreAggλ
-└── (no dependencies)
-
-MooreSelectλ
-└── (no dependencies)
-
-Modeλ
-└── (no dependencies)
-
-GroupbyBinλ
-└── (no dependencies)
-```
 
 | Function | Description |
 | --- | --- |
 | **Streakλ** | Computes streak counts of consecutive identical values |
 | **Countdownλ** | Generates countdown indices for contiguous runs |
+| **Instanceλ** | Obtain the instance numbers for unsorted values in a 1D array |
+| **Waveλ** | Returns a vertical 1D "wave array" by supplying a crest (max value) and an optional rep_count |
 
 #### Categorical Analysis
 
@@ -440,6 +230,9 @@ GroupbyBinλ
 | **GroupbyDateλ** | Aggregates values by date/time interval (minute → year) |
 | **PivotbyCatλ** | Pivots data by categories and values |
 | **Grainλ** | Downsamples a `matrix` by aggregating non‑overlapping spatial blocks |
+| **GroupIndexλ** | Assign numerical group indices to a 1D array (horizontal or vertical) |
+| **Occurrenceλ** | Selects the Nᵀᴴ_occurrences of rows from a specified 2D array by locating the Nᵀᴴ instance from a crit_vectors |
+| **OccurrenceRangeλ** | Selects a range of occurrences of rows from a specified 2D array by locating the Nᵀᴴ instances from a crit_vector |
 
 #### Neighborhoods
 
@@ -461,28 +254,6 @@ GroupbyBinλ
 ### Text
 This category provides functions that overcome common limitations in Excel's native text engine (e.g., `TEXTSPLIT` cannot spill 2D results; `BYROW` cannot deploy `SORT` to align columns). These functions enable structural alignment, extraction, and transformation of text arrays, extending Excel's capabilities for both 1D and 2D inputs.
 
-#### Dependency Hierarchy
-```
-RegexSafeλ
-└── Splitλ
-    └── Alignλ
-        ├── AlignDistinctλ
-        └── AlignUniqueλ
-
-Explodeλ
-├── NumbersOnlyλ
-└── TextOnlyλ
-
-MGridλ
-└── Explodeλ
-
-Resizeλ
-└── Explodeλ
-
-Coalesceλ
-└── (no dependencies)
-
-```
 
 | Function | Description |
 | --- | --- |
@@ -502,22 +273,6 @@ Coalesceλ
 ### Engineering
 Binary, Gray‑code, and bit‑level utilities designed to operate well beyond Excel's native `DEC2BIN` limit of 511. All functions support concise binary strings and shape‑preserving array behavior, with optional 2D exploded bit‑matrices where applicable.
 
-#### Dependency Hierarchy
-```
-Explodeλ
-├── Bin2Decλ
-└── Bin2Grayλ
-
-Dec2Binλ
-├── BitCountλ
-└── Dec2Grayλ
-
-Bin2Grayλ
-└── Dec2Grayλ
-
-Dec2Grayλ
-└── (depends on Bin2Grayλ and Dec2Binλ)
-```
 
 | Function | Description |
 | --- | --- |
@@ -531,20 +286,6 @@ Dec2Grayλ
 ### Combinatorics
 High‑performance generators for permutations, combinations, subsets, and related structures.
 
-#### Dependency Hierarchy
-```
-Enumerateλ
-├── PermRλ
-├── Permλ
-├── CombinationsRλ
-├── Combinationsλ
-└── Derangementsλ
-
-Dec2Binλ
-├── KnapSackλ
-├── SubsetGenλ
-└── SubsetSumλ
-```
 
 | Function | Description |
 | --- | --- |
@@ -1064,7 +805,7 @@ This technique is applied only where it measurably improves performance. Functio
 For an example where deferred evaluation is advantageous, please see `Spiralλ`: https://gist.github.com/Patrick2788/f89ce80c7410bd30eef8adb949b088b0.
 
 #### Reuse of Lower‑Level Operators
-As shown in the dependency hierarchies in **Section 3: Function Reference**, most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`. This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
+Most BigSpill functions are composed from smaller, efficient primitives such as `Resizeλ`, `Streakλ` and `Echoλ`. This modular design reduces duplication, improves maintainability, and ensures that complex operators inherit the performance characteristics of the optimized lower‑level components.
 
 
 ---
