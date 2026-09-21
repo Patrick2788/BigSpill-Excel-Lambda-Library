@@ -23,3 +23,7 @@
 - Updated onboarding workbooks
 - Updated documentation (README, Function Index, User Manual)
 
+## Repository Additions
+- Added `AFE-JSON/BigSpill.json`, a machine-readable manifest containing module metadata, category index, and all 97 public-facing functions.
+
+
