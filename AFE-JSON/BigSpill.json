@@ -1,0 +1,637 @@
+{
+  "module": {
+    "name": "BigSpill",
+    "version": "1.2.0",
+    "author": "Patrick H.",
+    "description": "A 97‑function Excel LAMBDA library for 2D array shaping, grid algebra, combinatorics, text processing, and analytics."
+  },
+
+  "categories": [
+    "Gridwork",
+    "Grid Geometry",
+    "2D Array Shaping",
+    "Grid Algebra",
+    "Repetition",
+    "Grid Analytics",
+    "Text",
+    "Engineering",
+    "Combinatorics",
+    "Grid Diagnostics"
+  ],
+
+  "functions": [
+    {
+      "name": "DGridλ",
+      "category": "Gridwork",
+      "dependencies": ["CGridλ"],
+      "description": "Direction grid (0°-360°) using centered Cartesian axes"
+    },
+    {
+      "name": "CGridλ",
+      "category": "Gridwork",
+      "dependencies": ["Resizeλ"],
+      "description": "Cartesian grid (row or column coordinates, centered)"
+    },
+    {
+      "name": "MGridλ",
+      "category": "Gridwork",
+      "dependencies": ["Resizeλ"],
+      "description": "Mesh grid (1‑based row or column indices)"
+    },
+    {
+      "name": "TGridλ",
+      "category": "Gridwork",
+      "dependencies": ["Resizeλ"],
+      "description": "Thresholded mesh grid (indices wrap after a limit)"
+    },
+    {
+      "name": "PolarGridλ",
+      "category": "Gridwork",
+      "dependencies": ["CGridλ"],
+      "description": "Polar coordinates: radial distance and angle (ATAN2)"
+    },
+    {
+      "name": "Circleλ",
+      "category": "Grid Geometry",
+      "dependencies": ["CGridλ", "Squeezeλ"],
+      "description": "Circular region by target or {row, col} center"
+    },
+    {
+      "name": "Diamondλ",
+      "category": "Grid Geometry",
+      "dependencies": ["CGridλ", "Squeezeλ"],
+      "description": "Manhattan‑radius diamond"
+    },
+    {
+      "name": "Plusλ",
+      "category": "Grid Geometry",
+      "dependencies": ["CGridλ", "Squeezeλ"],
+      "description": "Cross‑shaped region (von Neumann neighborhood)"
+    },
+    {
+      "name": "Pyramidλ",
+      "category": "Grid Geometry",
+      "dependencies": ["MGridλ"],
+      "description": "Directional half‑diamond (four pieces)"
+    },
+    {
+      "name": "Ringλ",
+      "category": "Grid Geometry",
+      "dependencies": ["MGridλ"],
+      "description": "Layer‑based perimeter extraction"
+    },
+    {
+      "name": "Squareλ",
+      "category": "Grid Geometry",
+      "dependencies": ["CGridλ", "Squeezeλ"],
+      "description": "Chebyshev‑radius square"
+    },
+    {
+      "name": "Triangleλ",
+      "category": "Grid Geometry",
+      "dependencies": ["CGridλ", "Squeezeλ"],
+      "description": "Directional triangular region (above or below)"
+    },
+    {
+      "name": "ReShape2Dλ",
+      "category": "2D Array Shaping",
+      "dependencies": [],
+      "description": "Reshapes a 2D array into a new column width using row‑major order"
+    },
+    {
+      "name": "Scan2Dλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["ReShape2Dλ", "Traverseλ"],
+      "description": "Traversal‑aware 2D scanning operator extending Excel’s native SCAN"
+    },
+    {
+      "name": "Traverseλ",
+      "category": "2D Array Shaping",
+      "dependencies": [],
+      "description": "Remaps a 2D array into a new traversal order using diagonal directions"
+    },
+    {
+      "name": "Resizeλ",
+      "category": "2D Array Shaping",
+      "dependencies": [],
+      "description": "Repeats a 2D array vertically and/or horizontally by integer repeat counts"
+    },
+    {
+      "name": "TakeBlockλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["MGridλ", "Resizeλ"],
+      "description": "Extracts a rectangular block using start_at and optional stop_when"
+    },
+    {
+      "name": "DStackλ",
+      "category": "2D Array Shaping",
+      "dependencies": [],
+      "description": "Stacks multiple 2D arrays along a depth dimension"
+    },
+    {
+      "name": "WrapRows2Dλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["Echoλ"],
+      "description": "Wraps into row blocks of specified height"
+    },
+    {
+      "name": "WrapCols2Dλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["Echoλ"],
+      "description": "Wraps into column blocks of specified width"
+    },
+    {
+      "name": "Staircaseλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["ValidateStaircaseλ"],
+      "description": "Constructs diagonal staircase patterns"
+    },
+    {
+      "name": "ValidateStaircaseλ",
+      "category": "2D Array Shaping (Validation)",
+      "dependencies": [],
+      "description": "Validates Staircaseλ"
+    },
+    {
+      "name": "UnPivotλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["RepeatRowsλ", "Resizeλ", "InsulateRowsλ"],
+      "description": "Converts a matrix into a flattened row‑wise table"
+    },
+    {
+      "name": "Zipλ",
+      "category": "2D Array Shaping",
+      "dependencies": [],
+      "description": "Zips 1-4 arrays by flattening and aligning by length"
+    },
+    {
+      "name": "SliceByDegλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["DGridλ", "DeleteWhereλ"],
+      "description": "Extracts angular slices using degree bounds (0°-360°)"
+    },
+    {
+      "name": "Padλ",
+      "category": "2D Array Shaping",
+      "dependencies": ["InsulateRowsλ", "InsulateColsλ"],
+      "description": "Applies row and/or column padding to any array"
+    },
+    {
+      "name": "InsulateRowsλ",
+      "category": "2D Array Shaping (Padding)",
+      "dependencies": [],
+      "description": "Adds rows of padding before and/or after an input array"
+    },
+    {
+      "name": "InsulateColsλ",
+      "category": "2D Array Shaping (Padding)",
+      "dependencies": ["InsulateRowsλ"],
+      "description": "Adds columns of padding before and/or after an input array"
+    },
+    {
+      "name": "Magnifyλ",
+      "category": "2D Array Shaping (Interpolation)",
+      "dependencies": [],
+      "description": "Expands each element into a block of specified height × width using nearest‑neighbor interpolation"
+    },
+    {
+      "name": "Zoomλ",
+      "category": "2D Array Shaping (Kernel Expansion)",
+      "dependencies": ["Resizeλ"],
+      "description": "Expands each element into a block whose size matches the height × width of zoom_kernel"
+    },
+    {
+      "name": "DeleteRowsλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": ["Streakλ", "Countdownλ"],
+      "description": "Deletes rows from a 2D array based on contiguous subgroup runs"
+    },
+    {
+      "name": "DeleteColsλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": ["Streakλ", "Countdownλ"],
+      "description": "Deletes columns from a 2D array based on contiguous subgroup runs"
+    },
+    {
+      "name": "DeleteWhereλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": [],
+      "description": "Removes vertical and horizontal vectors based on a predicate LAMBDA"
+    },
+    {
+      "name": "Pinchλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": [],
+      "description": "Removes rows/columns whose cells all have LEN(cell) = 0"
+    },
+    {
+      "name": "Removeλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": [],
+      "description": "Removes specific rows and/or columns"
+    },
+    {
+      "name": "Squeezeλ",
+      "category": "Grid Algebra (Deletion)",
+      "dependencies": [],
+      "description": "Removes null and straight‑zero vectors with optional custom_criteria"
+    },
+    {
+      "name": "KroneckerProdλ",
+      "category": "Grid Algebra (Expansion)",
+      "dependencies": ["Magnifyλ", "Resizeλ"],
+      "description": "Computes the Kronecker product of two arrays"
+    },
+    {
+      "name": "Excludeλ",
+      "category": "Grid Algebra (Filtering)",
+      "dependencies": [],
+      "description": "Filters an array by excluding any row containing a specified criterion"
+    },
+    {
+      "name": "Snapλ",
+      "category": "Grid Algebra (Filtering)",
+      "dependencies": [],
+      "description": "Selects rows containing at least one value from the include‑criteria"
+    },
+    {
+      "name": "Shiftλ",
+      "category": "Grid Algebra (Rolling)",
+      "dependencies": ["Explodeλ"],
+      "description": "Circular shift on scalar, 1D, or 2D arrays"
+    },
+    {
+      "name": "ShiftRowsλ",
+      "category": "Grid Algebra (Rolling)",
+      "dependencies": ["Shiftλ", "MGridλ", "Resizeλ"],
+      "description": "Circular horizontal shift per row"
+    },
+    {
+      "name": "ShiftColsλ",
+      "category": "Grid Algebra (Rolling)",
+      "dependencies": ["Shiftλ", "MGridλ", "Resizeλ"],
+      "description": "Circular vertical shift per column"
+    },
+    {
+      "name": "Embedλ",
+      "category": "Grid Algebra (Selection)",
+      "dependencies": [],
+      "description": "Embeds an array into a 2D host at a specified row or column index"
+    },
+    {
+      "name": "KeepRowsλ",
+      "category": "Grid Algebra (Selection)",
+      "dependencies": ["Streakλ", "Countdownλ"],
+      "description": "Retains rows based on contiguous subgroup runs"
+    },
+    {
+      "name": "KeepColsλ",
+      "category": "Grid Algebra (Selection)",
+      "dependencies": ["Streakλ", "Countdownλ"],
+      "description": "Retains columns based on contiguous subgroup runs"
+    },
+    {
+      "name": "BlockMapλ",
+      "category": "Grid Algebra (Structural Mapping)",
+      "dependencies": ["ValidateBlockMapλ"],
+      "description": "Reshapes a matrix row‑wise or column‑wise into blocks of size depth × width"
+    },
+    {
+      "name": "ValidateBlockMapλ",
+      "category": "Grid Algebra (Core Validation)",
+      "dependencies": [],
+      "description": "Validates BlockMapλ"
+    },
+    {
+      "name": "Convolveλ",
+      "category": "Grid Algebra (Structural Mapping)",
+      "dependencies": ["Resizeλ"],
+      "description": "Performs sliding‑window convolution using a 2D kernel"
+    },
+    {
+      "name": "Foldλ",
+      "category": "Grid Algebra (Structural Mapping)",
+      "dependencies": ["Alignλ"],
+      "description": "Groups identical rows and aggregates values from values_array"
+    },
+    {
+      "name": "Join2Dλ",
+      "category": "Grid Algebra (Structural Mapping)",
+      "dependencies": [],
+      "description": "Joins non‑empty values across 2-4 identically‑shaped arrays using a delimiter"
+    },
+    {
+      "name": "Echoλ",
+      "category": "Repetition",
+      "dependencies": [],
+      "description": "Repeats each element in a 1D array according to repeat counts"
+    },
+    {
+      "name": "RepeatRowsλ",
+      "category": "Repetition",
+      "dependencies": [],
+      "description": "Repeats each row according to repeat counts"
+    },
+    {
+      "name": "RepeatColsλ",
+      "category": "Repetition",
+      "dependencies": [],
+      "description": "Repeats each column according to repeat counts"
+    },
+    {
+      "name": "Tessellateλ",
+      "category": "Repetition",
+      "dependencies": ["TGridλ"],
+      "description": "Generates a modular tessellation of a 2D pattern defined by new_height × new_width"
+    },
+    {
+      "name": "Streakλ",
+      "category": "Grid Analytics (Sequencing)",
+      "dependencies": [],
+      "description": "Computes streak counts of consecutive identical values"
+    },
+    {
+      "name": "Countdownλ",
+      "category": "Grid Analytics (Sequencing)",
+      "dependencies": [],
+      "description": "Generates countdown indices for contiguous runs"
+    },
+    {
+      "name": "Instanceλ",
+      "category": "Grid Analytics (Sequencing)",
+      "dependencies": ["Countdownλ", "MGridλ", "Streakλ"],
+      "description": "Obtain the instance numbers for unsorted values in a 1D array"
+    },
+    {
+      "name": "Waveλ",
+      "category": "Grid Analytics (Sequencing)",
+      "dependencies": ["Echoλ"],
+      "description": "Returns a vertical 1D wave array by supplying a crest and optional rep_count"
+    },
+    {
+      "name": "ByDiagλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["ValidateDiagλ"],
+      "description": "Applies an ETA function or LAMBDA to each diagonal"
+    },
+    {
+      "name": "DiagMapλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["ByDiagλ", "ValidateDiagλ"],
+      "description": "Extracts all diagonals and returns them as a 2D matrix"
+    },
+    {
+      "name": "DiagIndexλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["ByDiagλ", "ValidateDiagλ"],
+      "description": "Extracts a single diagonal or anti‑diagonal vector"
+    },
+    {
+      "name": "ValidateDiagλ",
+      "category": "Grid Analytics (Core Validation)",
+      "dependencies": [],
+      "description": "Validates ByDiagλ"
+    },
+    {
+      "name": "Pairwiseλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["Echoλ", "Resizeλ"],
+      "description": "Creates vertical pairs from 1D and scalar inputs"
+    },
+    {
+      "name": "Triplewiseλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["Pairwiseλ"],
+      "description": "Generates a Cartesian product from 3 sets"
+    },
+    {
+      "name": "Quadwiseλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["RepeatRowsλ", "Resizeλ", "Triplewiseλ"],
+      "description": "Generates a Cartesian product from 4 sets"
+    },
+    {
+      "name": "GroupbyBinλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": [],
+      "description": "Aggregates values into fixed‑width numeric bins"
+    },
+    {
+      "name": "GroupbyDateλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["ValidateGDλ"],
+      "description": "Aggregates values by date/time interval (minute → year)"
+    },
+    {
+      "name": "ValidateGDλ",
+      "category": "Grid Analytics (Core Validation)",
+      "dependencies": [],
+      "description": "Validates GroupbyDateλ"
+    },
+    {
+      "name": "PivotbyCatλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["Streakλ", "RepeatRowsλ"],
+      "description": "Pivots data by categories and values"
+    },
+    {
+      "name": "GroupIndexλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": [],
+      "description": "Assign numerical group indices to a 1D array"
+    },
+    {
+      "name": "Occurrenceλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["Instanceλ"],
+      "description": "Selects the Nth occurrences of rows from a specified 2D array"
+    },
+    {
+      "name": "OccurrenceRangeλ",
+      "category": "Grid Analytics (Categorical Analysis)",
+      "dependencies": ["Instanceλ"],
+      "description": "Selects a range of occurrences of rows from a specified 2D array"
+    },
+    {
+      "name": "Grainλ",
+      "category": "Grid Analytics (Neighborhoods)",
+      "dependencies": [],
+      "description": "Downsamples a matrix by aggregating non‑overlapping spatial blocks"
+    },
+    {
+      "name": "MooreAggλ",
+      "category": "Grid Analytics (Neighborhoods)",
+      "dependencies": [],
+      "description": "Aggregates over Moore or von Neumann neighborhoods using ETA functions"
+    },
+    {
+      "name": "MooreSelectλ",
+      "category": "Grid Analytics (Neighborhoods)",
+      "dependencies": [],
+      "description": "Selects a specific neighbor (1-9) from the Moore neighborhood"
+    },
+    {
+      "name": "Histogramλ",
+      "category": "Grid Analytics (Statistics)",
+      "dependencies": [],
+      "description": "Generates a histogram using automatic binning rules"
+    },
+    {
+      "name": "Modeλ",
+      "category": "Grid Analytics (Statistics)",
+      "dependencies": [],
+      "description": "Returns the most frequently occurring values or text entries"
+    },
+    {
+      "name": "ZoneStatλ",
+      "category": "Grid Analytics (Statistics)",
+      "dependencies": ["Histogramλ"],
+      "description": "Aggregates values by zones determined by Histogramλ"
+    },
+    {
+      "name": "Alignλ",
+      "category": "Text",
+      "dependencies": ["Splitλ"],
+      "description": "Sorts each row or column alphabetically"
+    },
+    {
+      "name": "AlignDistinctλ",
+      "category": "Text",
+      "dependencies": ["Alignλ"],
+      "description": "Sorted distinct values"
+    },
+    {
+      "name": "AlignUniqueλ",
+      "category": "Text",
+      "dependencies": ["Alignλ"],
+      "description": "Sorted unique values"
+    },
+    {
+      "name": "Coalesceλ",
+      "category": "Text",
+      "dependencies": [],
+      "description": "Returns the first non‑empty value across 2–4 arrays"
+    },
+    {
+      "name": "Explodeλ",
+      "category": "Text",
+      "dependencies": ["MGridλ", "Resizeλ"],
+      "description": "Converts scalar, 1D, or 2D input into exploded character array"
+    },
+    {
+      "name": "NumbersOnlyλ",
+      "category": "Text",
+      "dependencies": ["Explodeλ"],
+      "description": "Extracts numeric characters (0–9)"
+    },
+    {
+      "name": "TextOnlyλ",
+      "category": "Text",
+      "dependencies": ["Explodeλ"],
+      "description": "Extracts non‑numeric characters"
+    },
+    {
+      "name": "Splitλ",
+      "category": "Text",
+      "dependencies": ["RegexSafeλ"],
+      "description": "Splits text arrays into tokens and can return a 2D spill"
+    },
+    {
+      "name": "RegexSafeλ",
+      "category": "Text (Core)",
+      "dependencies": [],
+      "description": "Validates Splitλ"
+    },
+    {
+      "name": "Bin2Decλ",
+      "category": "Engineering",
+      "dependencies": ["Explodeλ"],
+      "description": "Converts concise binary → decimal"
+    },
+    {
+      "name": "Bin2Grayλ",
+      "category": "Engineering",
+      "dependencies": ["Explodeλ"],
+      "description": "Converts binary → Gray code"
+    },
+    {
+      "name": "BitCountλ",
+      "category": "Engineering",
+      "dependencies": ["Dec2Binλ"],
+      "description": "Counts number of 1‑bits"
+    },
+    {
+      "name": "Dec2Binλ",
+      "category": "Engineering",
+      "dependencies": [],
+      "description": "Converts non‑negative integers → binary"
+    },
+    {
+      "name": "Dec2Grayλ",
+      "category": "Engineering",
+      "dependencies": ["Dec2Binλ", "Bin2Grayλ"],
+      "description": "Converts non‑negative integers → Gray code"
+    },
+    {
+      "name": "Enumerateλ",
+      "category": "Combinatorics",
+      "dependencies": [],
+      "description": "Generating function for PermRλ, Permλ, Combinationsλ, and Derangementsλ"
+    },
+    {
+      "name": "PermRλ",
+      "category": "Combinatorics",
+      "dependencies": ["Enumerateλ"],
+      "description": "Permutations with replacement"
+    },
+    {
+      "name": "Permλ",
+      "category": "Combinatorics",
+      "dependencies": ["Enumerateλ"],
+      "description": "Permutations without replacement"
+    },
+    {
+      "name": "CombinationsRλ",
+      "category": "Combinatorics",
+      "dependencies": ["Enumerateλ"],
+      "description": "Combinations with replacement"
+    },
+    {
+      "name": "Combinationsλ",
+      "category": "Combinatorics",
+      "dependencies": ["Enumerateλ"],
+      "description": "Combinations without replacement"
+    },
+    {
+      "name": "Derangementsλ",
+      "category": "Combinatorics",
+      "dependencies": ["Enumerateλ"],
+      "description": "Permutations where no element remains in its original position"
+    },
+    {
+      "name": "KnapSackλ",
+      "category": "Combinatorics",
+      "dependencies": ["Dec2Binλ"],
+      "description": "Solves the 0–1 Knapsack problem"
+    },
+    {
+      "name": "SubsetGenλ",
+      "category": "Combinatorics",
+      "dependencies": ["Dec2Binλ"],
+      "description": "Generates all subsets (power set) in binary‑mask order"
+    },
+    {
+      "name": "SubsetSumλ",
+      "category": "Combinatorics",
+      "dependencies": ["Dec2Binλ"],
+      "description": "Returns all subsets whose elements sum to a target"
+    },
+    {
+      "name": "Revealλ",
+      "category": "Grid Diagnostics",
+      "dependencies": [],
+      "description": "Returns either a semantic summary (Numbers, Texts, Errors, etc.) or a verbose cell‑by‑cell narration"
+    }
+  ]
+}
+
