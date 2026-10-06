@@ -24,3 +24,5 @@ Presently, nested array support requires one of the following builds:
 ## Advanced Formula Environment (AFE) Notice  
 Some functions used in BigSpill ALPHA - including FLATTEN, HASALL, and list literals such as {  } - are not yet recognized by AFE and
 will appear with red underlines. This will resolve once AFE updates. The module and functions are still able to run without issue.
+
+A demo .xlsx workbook will be uploaded very soon!
