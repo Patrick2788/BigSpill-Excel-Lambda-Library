@@ -26,4 +26,6 @@ Some functions used in BigSpill ALPHA - including FLATTEN, HASALL, and list lite
 will appear with red underlines. This will resolve once AFE updates. The module and functions are still able to run without issue.
 
 
-## A demo .xlsx workbook will be uploaded very soon!
+## The demo .xlsx workbook is now available.
+
+Private Gist for the prototypes (Import only): https://gist.github.com/Patrick2788/a126504f9a3f4c9fad8715ca2587306e
