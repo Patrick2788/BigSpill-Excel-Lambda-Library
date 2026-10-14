@@ -28,7 +28,7 @@
 
 ## Nested Array Prototypes
 - Created nested-array-prototypes/ folder to house early BigSpill 2.0 experimental work.
-- Added BigSpill 2.0 – Proto.xlsx, a demonstration workbook showcasing nested‑array techniques planned for the next major version.
+- Added BigSpill 2.0 - Proto.xlsx, a demonstration workbook showcasing nested‑array techniques planned for the next major version.
 
 ## Function Revision
 - Updated MooreSelectλ to use a more efficient neighborhood extraction method.
