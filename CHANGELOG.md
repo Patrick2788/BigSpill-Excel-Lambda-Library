@@ -26,4 +26,7 @@
 ## Repository Additions
 - Added `AFE-JSON/BigSpill.json`, a machine-readable manifest containing module metadata, category index, and all 97 public-facing functions.
 
+## Function Revision
+- Updated MooreSelectλ to use a more efficient neighborhood extraction method.
+
 
